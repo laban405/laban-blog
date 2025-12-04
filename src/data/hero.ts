@@ -1,9 +1,10 @@
 const heroData = {
-  headline: "Senior Frontend Engineer Building Scalable, High-Quality Web Applications",
-  subHeadline: "6+ years delivering performant, maintainable, and user-focused digital products using Angular, React, and modern frontend architectures.",
-  supportingLine: "I help teams accelerate delivery, modernize their frontends, and ship reliable, enterprise-grade interfaces.",
-  primaryCTA: "Hire Me",
-  secondaryCTA: "View Projects",
+    topLabel: "Laban Mogire — Senior Frontend Engineer",
+    headline: "I Design and Build Scalable, High-Quality Digital Experiences",
+    subHeadline: "I help companies create fast, reliable, and intuitive user interfaces through strong frontend architecture, thoughtful design, and performance-driven engineering.",
+    supportingLine: "With 6+ years improving product quality, engineering workflows, and user experience across enterprise and SaaS applications, I deliver frontend systems that scale with teams and business needs.",
+    primaryCTA: "Hire Me",
+    secondaryCTA: "View Projects",
 };
 
 export default heroData;

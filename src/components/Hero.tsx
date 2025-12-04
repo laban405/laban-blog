@@ -25,6 +25,9 @@ const Hero = ({ }) => {
       id="home"
     >
       <div className="w-full flex flex-col justify-center items-center h-full pt-28 sm:pt-0">
+        <p className="text-foreground text-sm sm:text-base mb-4 text-center md:text-start font-medium">
+          {heroData.topLabel}
+        </p>
         <h1 className="text-3xl lg:text-4xl xl:text-5xl leading-normal font-black text-center md:text-start">
           {heroData.headline}
         </h1>

@@ -202,3 +202,11 @@ li.check:before {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.bg-surface {
+  background-image: url(/surface-gradient.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
