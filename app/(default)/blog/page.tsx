@@ -1,9 +1,8 @@
-"use client";
 import { PostList } from "./_components/post-list";
 import { getPosts } from "@/sanity/lib/sanity";
 import HeroSection from "@/components/hero-section";
 
-export default async function Home() {
+export default async function BlogPage() {
   const allPosts = await getPosts();
 
   return (

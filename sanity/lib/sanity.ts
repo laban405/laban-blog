@@ -1,5 +1,5 @@
-import { createClient, groq } from "next-sanity";
-import clientConfig from "@/sanity.config";
+import { groq } from "next-sanity";
+import { client } from "./client";
 
 type Child = {
   _type: string;
@@ -111,7 +111,7 @@ export type Project = {
 };
 
 export async function getCategories(): Promise<Category[]> {
-  return createClient(clientConfig).fetch(
+  return client.fetch(
     groq`*[_type == "category"] | order(ordering asc) {
       title,
       heroTitle,
@@ -140,12 +140,12 @@ export async function getLatestPosts(): Promise<Post[]> {
     "categorySlug": category->slug.current
   }`;
 
-  const posts: Post[] = await createClient(clientConfig).fetch(query);
+  const posts: Post[] = await client.fetch(query);
   return posts;
 }
 
 export async function getPosts(): Promise<Post[]> {
-  return createClient(clientConfig).fetch(
+  return client.fetch(
     groq`*[_type == "post"] | order(order asc) {
       _id,
       _createdAt,
@@ -184,7 +184,7 @@ export async function getPostsByCategorySlug(
         "tags": blogTags[]->{title, "color": color.hex} 
       }`;
 
-      const posts: Post[] = await createClient(clientConfig).fetch(query);
+      const posts: Post[] = await client.fetch(query);
       return posts;
     } else {
       const query = groq`*[_type == "post" && category->slug.current == $categorySlug] | order(_createdAt desc) {
@@ -201,7 +201,7 @@ export async function getPostsByCategorySlug(
         "tags": blogTags[]->{title, "color": color.hex} 
       }`;
 
-      const posts: Post[] = await createClient(clientConfig).fetch(query, {
+      const posts: Post[] = await client.fetch(query, {
         categorySlug,
       });
       return posts;
@@ -231,7 +231,7 @@ export async function getPost(slug: string): Promise<Post> {
       "tags": blogTags[]->{title, "color": color.hex} 
     }`;
 
-    const post: Post = await createClient(clientConfig).fetch(query, { slug });
+    const post: Post = await client.fetch(query, { slug });
 
     const headers: Header[] = [];
     post.body.forEach((block: Block) => {
@@ -277,7 +277,7 @@ export async function getPostsByCategoryName(
       "tags": blogTags[]->{title, "color": color.hex} 
     }`;
 
-    const posts: Post[] = await createClient(clientConfig).fetch(query, {
+    const posts: Post[] = await client.fetch(query, {
       categoryName,
     });
     return posts;
@@ -295,7 +295,7 @@ export async function getLatestFavoriteOpenSourceProjects() {
     url
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
 
 export async function getAllFavoriteOpenSourceProjects() {
@@ -306,7 +306,7 @@ export async function getAllFavoriteOpenSourceProjects() {
     url
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
 
 export async function getLatestFavoriteYouTubeVideos() {
@@ -317,7 +317,7 @@ export async function getLatestFavoriteYouTubeVideos() {
     "videoCategoryName": videoCategoryName
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
 
 export async function getAllFavoriteYouTubeVideos() {
@@ -328,7 +328,7 @@ export async function getAllFavoriteYouTubeVideos() {
     "videoCategoryName": videoCategoryName
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
 
 export async function getVideoCategories(): Promise<VideoCategory[]> {
@@ -339,7 +339,7 @@ export async function getVideoCategories(): Promise<VideoCategory[]> {
     "color": color.hex
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
 
 export async function getFavoriteYoutubeVideosByCategory(
@@ -352,7 +352,7 @@ export async function getFavoriteYoutubeVideosByCategory(
     "videoCategoryName": videoCategory->title
   }`;
 
-  return createClient(clientConfig).fetch(query, { categoryTitle });
+  return client.fetch(query, { categoryTitle });
 }
 
 // Additional imports and types...
@@ -367,7 +367,7 @@ export async function getNextPostInSameCategory(
     }[0]
   `;
 
-  const currentPost = await createClient(clientConfig).fetch(currentPostQuery, {
+  const currentPost = await client.fetch(currentPostQuery, {
     postSlug,
   });
 
@@ -397,7 +397,7 @@ export async function getNextPostInSameCategory(
     }
   `;
 
-  const nextPost = await createClient(clientConfig).fetch(nextPostQuery, {
+  const nextPost = await client.fetch(nextPostQuery, {
     postSlug,
     categorySlug,
     currentPostCreatedAt: currentPost._createdAt,
@@ -416,7 +416,7 @@ export async function getPreviousPostInSameCategory(
     }[0]
   `;
 
-  const currentPost = await createClient(clientConfig).fetch(currentPostQuery, {
+  const currentPost = await client.fetch(currentPostQuery, {
     postSlug,
   });
 
@@ -446,7 +446,7 @@ export async function getPreviousPostInSameCategory(
     }
   `;
 
-  const previousPost = await createClient(clientConfig).fetch(
+  const previousPost = await client.fetch(
     previousPostQuery,
     {
       postSlug,
@@ -490,5 +490,5 @@ export async function getWork(): Promise<Work> {
     },
   }`;
 
-  return createClient(clientConfig).fetch(query);
+  return client.fetch(query);
 }
