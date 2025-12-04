@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -193,4 +193,12 @@ li.check:before {
   }
 
 
+}
+
+.bg-gradient {
+  background-image: url(/bg-gradient.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

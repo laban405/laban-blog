@@ -36,15 +36,8 @@ function AppLayout({ children }: LayoutProps) {
           <div
             className={cn(
               `${fontSans.className}`,
-              "min-h-screen bg-background antialiased relative"
+              "min-h-screen bg-background antialiased relative bg-gradient"
             )}
-            style={{
-              backgroundImage: 'url(/bg-gradient.svg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundAttachment: 'fixed'
-            }}
           >
             <Layout>
               {children}
