@@ -36,11 +36,18 @@ function AppLayout({ children }: LayoutProps) {
           <div
             className={cn(
               `${fontSans.className}`,
-              "min-h-screen bg-background antialiased"
+              "min-h-screen bg-background antialiased relative"
             )}
+            style={{
+              backgroundImage: 'url(/bg-gradient.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed'
+            }}
           >
             <Layout>
-            {children}
+              {children}
             </Layout>
           </div>
         </ThemeProvider>

@@ -6,13 +6,14 @@ import hero from "../../public/assets/icons/hero.png";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
+import heroData from "../data/hero";
 
 const boxVariant = {
   hidden: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
 };
 
-const Hero = ({}) => {
+const Hero = ({ }) => {
   const control = useAnimation();
 
   return (
@@ -25,20 +26,18 @@ const Hero = ({}) => {
     >
       <div className="w-full flex flex-col justify-center items-center h-full pt-28 sm:pt-0">
         <h1 className="text-3xl lg:text-4xl xl:text-5xl leading-normal font-black text-center md:text-start">
-          Transform Your Business with Enterprise Technology That Actually Works
+          {heroData.headline}
         </h1>
         <p className="text-foreground text-sm sm:text-xl mt-4 mb-6 text-center md:text-start mx-auto">
-          Grow with East Africa&apos;s leading business technology consultants.
-          <span className="text-transparent font-semibold mx-2 bg-clip-text bg-gradient-to-r from-secondary to-primary">
-            Vessel Global Systems
-          </span>
-          delivers secure, scalable solutions that drive real growth—from IT
-          infrastructure to custom software development.
+          {heroData.subHeadline}
+        </p>
+        <p className="text-foreground text-sm sm:text-lg mt-2 mb-6 text-center md:text-start mx-auto">
+          {heroData.supportingLine}
         </p>
         <div className="flex md:justify-start flex-col sm:flex-row items-center justify-center w-full">
           <Link href="/contact">
             <button className="bg-gradient-to-r from-secondary to-primary m-2 bg-primary text-lg p-2 px-3 font-medium text-white">
-              Get Started Now
+              {heroData.primaryCTA}
             </button>
           </Link>
           <LinkScroll
@@ -49,7 +48,7 @@ const Hero = ({}) => {
             duration={1000}
           >
             <button className="m-2 border border-primary text-lg p-2 px-3 font-medium hover:border-secondary text-primary hover:text-secondary">
-              Explore Services
+              {heroData.secondaryCTA}
             </button>
           </LinkScroll>
         </div>
