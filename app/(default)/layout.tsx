@@ -5,22 +5,22 @@ import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { SiteFooter } from "@/components/layout/footer";
-import Header from "@/components/layout/header";
+import PortfolioFooter from "@/components/portfolio/footer";
+import PortfolioHeader from "@/components/portfolio/header";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"), // Change to your project's domain
+  metadataBase: new URL("https://prodmast.com"),
   title: {
-    default: "Next-Shadcn-Sanity Blog",
-    template: "%s | Next-Shadcn-Sanity Blog",
+    default: "Senior Frontend Engineer - Portfolio",
+    template: "%s | Portfolio",
   },
   description:
-    "A modern blogging platform powered by Next.js 14, ShadcnUI, and Sanity.io.",
+    "Senior Frontend Engineer with 6+ years delivering performant, maintainable, and user-focused digital products using Angular, React, and modern frontend architectures.",
   openGraph: {
-    title: "Next-Shadcn-Sanity Blog",
+    title: "Senior Frontend Engineer - Portfolio",
     description:
-      "Explore the future of blogging with our platform powered by Next.js 14, ShadcnUI, and Sanity.io.",
-    url: "https://yourdomain.com", // Change to your project's URL
-    siteName: "Next-Shadcn-Sanity Blog",
+      "6+ years delivering performant, maintainable, and user-focused digital products. Building scalable, high-quality web applications.",
+    url: "https://portfolio.com",
+    siteName: "Portfolio",
     locale: "en_US",
     type: "website",
   },
@@ -36,12 +36,8 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Next-Shadcn-Sanity Blog",
+    title: "Senior Frontend Engineer - Portfolio",
     card: "summary_large_image",
-  },
-  verification: {
-    google: "YourGoogleVerificationToken", // Update with your new Google verification token
-    yandex: "YourYandexVerificationToken", // Update with your new Yandex verification token
   },
 };
 
@@ -55,15 +51,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx("text-black  dark", GeistSans.variable, GeistMono.variable)}
+      className={cx("text-black", GeistSans.variable, GeistMono.variable)}
+      suppressHydrationWarning
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Analytics />
           <main className="min-h-screen antialiased">
-            <Header />
+            <PortfolioHeader />
             {children}
-            <SiteFooter />
+            <PortfolioFooter />
           </main>
         </ThemeProvider>
       </body>
