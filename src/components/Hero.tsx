@@ -34,9 +34,9 @@ const Hero = ({ }) => {
         <p className="text-foreground text-sm sm:text-xl mt-4 mb-6 text-center md:text-start mx-auto">
           {heroData.subHeadline}
         </p>
-        <p className="text-foreground text-sm sm:text-lg mt-2 mb-6 text-center md:text-start mx-auto">
+        {/* <p className="text-foreground text-sm sm:text-lg mt-2 mb-6 text-center md:text-start mx-auto">
           {heroData.supportingLine}
-        </p>
+        </p> */}
         <div className="flex md:justify-start flex-col sm:flex-row items-center justify-center w-full">
           <Link href="/contact">
             <button className="bg-gradient-to-r from-secondary to-primary m-2 bg-primary text-lg p-2 px-3 font-medium text-white">

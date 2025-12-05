@@ -36,7 +36,7 @@ function AppLayout({ children }: LayoutProps) {
           <div
             className={cn(
               `${fontSans.className}`,
-              "min-h-screen bg-background antialiased relative bg-gradient"
+              "min-h-screen antialiased relative dark:bg-gradient"
             )}
           >
             <Layout>
