@@ -2,32 +2,32 @@ const services = [
   {
     icon: "/assets/icons/services/browser.png",
     title: "Frontend Development",
-    content: `Building modern, scalable web interfaces using Angular, React, and TypeScript. Clean architecture, reusable components, and production-ready implementation.`,
+    content: `Clean, scalable implementations built with best practices, maintainable patterns, and long-term stability.`,
   },
   {
     icon: "/assets/icons/services/changemnt.png",
     title: "Frontend Modernization",
-    content: `Upgrading legacy systems into fast, modular, maintainable frontends using micro-frontends, monorepos, and modern frameworks.`,
+    content: `Upgrading legacy interfaces into modular, performant, and future-proof architectures.`,
   },
   {
     icon: "/assets/icons/services/advise.png",
     title: "UI/UX Engineering",
-    content: `Improving usability, accessibility, and visual clarity through structured UX audits, clean interface design, and consistent component systems.`,
+    content: `Improving flow, clarity, and accessibility through thoughtful interface design and structured UX audits.`,
   },
   {
     icon: "/assets/icons/services/it-ops.png",
     title: "Performance Optimization",
-    content: `Reducing load times and improving responsiveness through caching, code splitting, PWA techniques, and optimized CI/CD pipelines.`,
+    content: `Reducing load times, improving responsiveness, and streamlining CI/CD workflows for faster delivery.`,
   },
   {
     icon: "/assets/icons/services/cloud.png",
-    title: "Mobile App Development",
-    content: `Cross-platform mobile apps built with Flutter, React Native, Ionic, and Capacitor — optimized for performance and smooth user experience.`,
+    title: "Mobile App Engineering",
+    content: `Cross-platform mobile apps with smooth interactions, clean UI, and consistent performance.`,
   },
   {
     icon: "/assets/icons/services/planning.png",
     title: "Architecture & Technical Leadership",
-    content: `Establishing design systems, code standards, documentation, and engineering processes while mentoring teams for scalable delivery.`,
+    content: `Design systems, code standards, documentation, and team mentorship to scale engineering maturity.`,
   },
 ];
 export default services;

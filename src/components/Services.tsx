@@ -18,7 +18,7 @@ const Services = () => {
   const control = useAnimation();
 
 
-  const  theme  = useTheme()
+  const theme = useTheme()
 
   return (
     <div
@@ -32,13 +32,8 @@ const Services = () => {
       <div className="container mx-auto flex flex-col w-full justify-center ">
         <div className="w-full">
           <h3 className="text-3xl lg:text-4xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-secondary to-primary text-center">
-            Our Services
+            Services
           </h3>
-          <p className="mx-auto text-center my-8 max-w-[600px] text-sm sm:text-lg">
-            We strive to become a powerhouse by establishing ourselves as a
-            reputable provider of end-to-end business solutions in the East
-            Africa Region where we are currently operating.
-          </p>
           <Spotlight className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid gap-4 min-h-screen">
             {services.map((service) => {
               return (
