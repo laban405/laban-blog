@@ -10,7 +10,7 @@ const CTA = () => {
         >
             <div className="w-full flex flex-col justify-center text-center mx-auto">
                 <h2 className="text-center">
-                    Let's Build Something Exceptional
+                    Let&apos;s Build Something Exceptional
                 </h2>
                 <p className="max-w-[768px] my-6 text-center mx-auto">
                     Whether you need help designing a scalable architecture, improving UI quality, 
