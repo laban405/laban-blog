@@ -1,16 +1,8 @@
 const aboutData = {
-  title: "About Laban",
-  description: "I'm a Senior Frontend Engineer specializing in designing and implementing scalable, maintainable, and user-focused digital products.",
-  mainContent: "My work blends modern frontend engineering, UX clarity, and performance optimization to help teams build interfaces that stand the test of time.",
-  closingContent: "I excel at simplifying complexity — turning large codebases into structured, predictable systems, and transforming product ideas into clean, intuitive experiences users trust.",
-  strengths: [
-    "Scalable frontend architecture",
-    "Clean component-driven design",
-    "High-performance UI engineering",
-    "UX/UI refinement and accessibility",
-    "Engineering leadership and team enablement"
-  ],
-  industries: "I've contributed to high-impact platforms in e-commerce, transport, fintech, IoT, and enterprise operations."
+    title: "About Me",
+    description: "I'm a Senior Frontend Engineer specializing in frontend architecture, system design, and building scalable, maintainable user interfaces. I focus on turning complex or legacy products into clear, efficient, and predictable frontend systems.",
+    mainContent: "I've delivered high-impact work in e-commerce, transport, fintech, IoT, and enterprise operations. At Kamsware I modernized architecture, improved performance, optimized CI and CD workflows, and built real-time IoT dashboards. At Kyosk Digital Services I designed micro-frontend structures, introduced a design system, integrated GraphQL, and improved PWA performance for large distributed user bases.",
+    closingContent: "My strengths include component-driven engineering, performance optimization, UX refinement and accessibility, and mentoring teams to build cleaner, more resilient systems. I aim to create products that are intuitive, reliable, and built for long-term growth."
 };
 
 export default aboutData;

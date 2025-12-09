@@ -1,5 +1,5 @@
 import React from "react";
-import { Ubuntu as FontSans } from "next/font/google";
+import { inter, playfair } from "./fonts";
 import { cn } from "../lib/utils";
 import Layout from "../components/Layout/Layout";
 import { ThemeProvider } from "../providers/theme-provider";
@@ -9,11 +9,7 @@ global.performance = global.performance || {
   now: () => new Date().getTime(),
 };
 
-const fontSans = FontSans({
-  weight: "300",
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-ubuntu",
-});
+
 
 interface LayoutProps {
   children: any;
@@ -24,9 +20,9 @@ function AppLayout({ children }: LayoutProps) {
     <html
       lang="en"
       suppressHydrationWarning
-      className="h-full bg-primary text-base antialiased"
+      className={`${inter.variable} ${playfair.variable} h-full bg-primary text-base antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col font-inter">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -35,7 +31,6 @@ function AppLayout({ children }: LayoutProps) {
         >
           <div
             className={cn(
-              `${fontSans.className}`,
               "min-h-screen antialiased relative dark:bg-gradient"
             )}
           >

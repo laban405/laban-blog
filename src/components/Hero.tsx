@@ -24,17 +24,17 @@ const Hero = ({ }) => {
        flex-col md:flex-row gap-8 py-16`}
       id="home"
     >
-      <div className="w-full flex flex-col justify-center items-center h-full pt-28 sm:pt-0">
-        <p className="text-foreground text-sm sm:text-base mb-4 text-center md:text-start font-medium">
+      <div className="w-full max-w-2xl flex flex-col justify-center h-full pt-28 sm:pt-0">
+        <p className=" text-base mb-4 text-center md:text-start font-medium">
           {heroData.topLabel}
         </p>
-        <h1 className="text-3xl lg:text-4xl xl:text-5xl leading-normal font-black text-center md:text-start">
+        <h1 className="">
           {heroData.headline}
         </h1>
-        <p className="text-foreground text-sm sm:text-xl mt-4 mb-6 text-center md:text-start mx-auto">
+        <p className="mt-4 mb-6">
           {heroData.subHeadline}
         </p>
-        {/* <p className="text-foreground text-sm sm:text-lg mt-2 mb-6 text-center md:text-start mx-auto">
+        {/* <p className=" text-sm sm:text-lg mt-2 mb-6 text-center md:text-start mx-auto">
           {heroData.supportingLine}
         </p> */}
         <div className="flex md:justify-start flex-col sm:flex-row items-center justify-center w-full">
@@ -56,7 +56,7 @@ const Hero = ({ }) => {
           </LinkScroll>
         </div>
       </div>
-      <motion.div
+      {/* <motion.div
         variants={boxVariant}
         initial="hidden"
         animate={control}
@@ -71,7 +71,7 @@ const Hero = ({ }) => {
             className="w-full"
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

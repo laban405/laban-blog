@@ -37,10 +37,8 @@ const Navbar = () => {
     }
   }, [control, inView]);
 
-  const sections = ["home", "about", "partners", "services", "team"];
+  const sections = ["home", "about", "services", "projects","contact"];
   const active = useActiveSection(sections);
-
-  console.log("active link", active);
 
   return (
     <>
