@@ -1,8 +1,8 @@
 const aboutData = {
     title: "About Me",
-    description: "I'm a Senior Frontend Engineer specializing in frontend architecture, system design, and building scalable, maintainable user interfaces. I focus on turning complex or legacy products into clear, efficient, and predictable frontend systems.",
-    mainContent: "I've delivered high-impact work in e-commerce, transport, fintech, IoT, and enterprise operations. At Kamsware I modernized architecture, improved performance, optimized CI and CD workflows, and built real-time IoT dashboards. At Kyosk Digital Services I designed micro-frontend structures, introduced a design system, integrated GraphQL, and improved PWA performance for large distributed user bases.",
-    closingContent: "My strengths include component-driven engineering, performance optimization, UX refinement and accessibility, and mentoring teams to build cleaner, more resilient systems. I aim to create products that are intuitive, reliable, and built for long-term growth."
+    description: `I’m a Senior Frontend Engineer focused on shaping frontend systems that stay clear and reliable as products grow. I spend most of my time breaking down complex or aging interfaces and rebuilding them into structured, predictable foundations that teams can scale with confidence.`,
+    mainContent: `I’ve worked across e-commerce, fintech, transport, IoT, and large internal tools. I enjoy stepping into messy codebases, defining patterns, and setting up shared building blocks that make development faster and more consistent over time. That includes improving performance, aligning UI behavior, and designing interfaces that hold up across different devices and network conditions.`,
+    closingContent: `I care about long term maintainability, accessibility, and reusable components, and I enjoy helping teams think beyond short-term fixes. Good frontend architecture should fade into the background for users and remove friction for the people building it.`
 };
 
 export default aboutData;

@@ -1,14 +1,14 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Josefin_Sans, Cardo } from "next/font/google";
 
-export const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+export const josefin = Josefin_Sans({
+    subsets: ["latin"],
+    variable: "--font-josefin",
+    display: "swap",
 });
 
-export const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["600", "700"],
-  display: "swap",
+export const cardo = Cardo({
+    subsets: ["latin"],
+    variable: "--font-cardo",
+    weight: ["400", "700"],
+    display: "swap",
 });

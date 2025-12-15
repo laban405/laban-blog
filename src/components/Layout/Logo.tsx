@@ -11,8 +11,8 @@ const Logo = () => {
   return (
     <>
       <Link href="/#home">
-        <span className="font-bold text-primary dark:text-secondary font-playfair">Laban </span>
-        <span className="font-bold text-secondary font-playfair">  Mogire</span>
+        <span className="font-bold text-primary dark:text-secondary font-cardo">Laban </span>
+        <span className="font-bold text-secondary font-cardo dark:text-accent-foreground">  Mogire</span>
       </Link>
     </>
   );
