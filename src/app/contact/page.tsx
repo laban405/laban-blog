@@ -47,10 +47,10 @@ function Contact() {
   };
 
   return (
-    <div className=" bg-gradient-to-r m-0 p-0 min-h-[80vh] pt-36 max-w-screen-xl mx-auto mb-10">
-      <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary  text-3xl font-bold mt-26 mb-8 p-4 dark:text ">
-        Contact Us
-      </h1>
+    <div className="container mx-auto bg-gradient-to-r m-0 p-0 min-h-[80vh] pt-36 mb-10">
+      <h2 className="font-bold mt-26 mb-8 p-4 ">
+        Contact
+      </h2>
       {isSuccessful && (
         <div className="h-16 w-full bg-secondary flex justify-center align-center p-4 mb-8">
           <p className="text-center text-black font-medium font-24">
@@ -68,11 +68,11 @@ function Contact() {
       <div className="flex justify-around  max-md:flex-col">
         <div className="p-6 rounded-lg shadow mx-8 md:mx-4 flex-1">
           <h1 className="text-center dark:text text-lg font-semibold">
-            Get In Touch With Us
+            Get In Touch
           </h1>
           <ul>
             <li className="p-7 flex">
-              <a href="#" className="flex">
+              <a href="tel:+254797313732" className="flex">
                 <div className="bg-gradient-to-r from-secondary to-primary text-2xl text-white items-center rounded-lg  w-30 h-30 p-6  ">
                   <FaPhone className="" />
                 </div>
@@ -81,20 +81,20 @@ function Contact() {
                     <h5 className="font-bold mb-3 text-black-600 dark:text">
                       Phone No.
                     </h5>
-                    <p className=" dark:text">+ 254 731 318 075</p>
+                    <p className=" dark:text">+ 254 797 313 732</p>
                   </div>
                 </div>
               </a>
             </li>
             <li className="p-7 flex">
-              <a href="#" className="flex">
+              <a href="mailto:laban405@gmail.com" className="flex">
                 <div className="bg-gradient-to-r from-secondary to-primary text-2xl text-white items-center rounded-lg  w-30 h-30 p-6  ">
                   <FaEnvelope className="" />
                 </div>
                 <div className="mt-2 ml-4">
                   <div className="ml-2 flex flex-col items-start">
                     <h5 className="font-bold mb-3">Email Address</h5>
-                    <p className="">info@vesselsystems.co.ke</p>
+                    <p className="">laban405@gmail.com</p>
                   </div>
                 </div>
               </a>

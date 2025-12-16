@@ -1,22 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { cn } from "../../lib/utils";
 import { ModeToggle } from "./ModeToggle";
 import { useActiveSection } from "@/hooks/useActiveSection";
-
-const logoVariant = {
-  hidden: {
-    x: 200,
-    opacity: 0.5,
-    scale: [1, 2, 2, 1, 1],
-    transition: { duration: 1 },
-  },
-  visible: { x: 0, y: 0, opacity: 1, scale: 1, transition: { duration: 1 } },
-};
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [scrollActive, setScrollActive] = useState(false);
@@ -26,19 +17,43 @@ const Navbar = () => {
     });
   }, []);
 
-  const control = useAnimation();
+
   const [ref, inView] = useInView();
 
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
 
-  const sections = ["home", "about", "services", "projects","contact"];
+
+  const sections = ["home", "about", "services", "projects", "contact"];
   const active = useActiveSection(sections);
+
+  const navLinksRef = useRef<HTMLUListElement | null>(null);
+
+  useGSAP(() => {
+    if (!navLinksRef.current) return;
+
+    console.log('animated>>>');
+
+
+    const links = navLinksRef.current.querySelectorAll("a");
+    const tl = gsap.timeline();
+
+    gsap.set(links, {
+      y: 24,
+      opacity: 0,
+      position: "relative",
+      zIndex: -1000,
+    });
+
+    tl
+    .to(links, {
+      y: 0,
+      opacity: 1,
+      zIndex: 1000,
+      ease: "power1.inOut",
+      stagger: 0.1,
+      duration: 0.3,
+      delay:0.3
+    },)
+  });
 
   return (
     <>
@@ -52,18 +67,15 @@ const Navbar = () => {
       >
         <div className="max-w-6xl mx-2 sm:mx-auto flex justify-between items-center border-l border-r px-2">
           <div className="p-2 pl-0">
-            <motion.div
+            <div
               ref={ref}
-              variants={logoVariant}
-              initial="hidden"
-              animate={control}
             >
               <Logo />
-            </motion.div>
+            </div>
           </div>
           <div className="flex items-center">
             <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 grid grid-flow-col py-3 sm:py-4">
-              <ul className="hidden md:flex col-start-4 col-end-8  items-center">
+              <ul className="hidden md:flex col-start-4 col-end-8  items-center h-[24px] overflow-hidden" ref={navLinksRef}>
                 {sections.map((id) => (
                   <Link
                     key={id}
