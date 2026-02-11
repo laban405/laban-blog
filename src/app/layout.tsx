@@ -1,15 +1,13 @@
 import React from "react";
 import { josefin, cardo } from "./fonts";
 import { cn } from "../lib/utils";
-import Layout from "../components/Layout/Layout";
+
 import { ThemeProvider } from "../providers/theme-provider";
 import "../styles/globals.css";
 
 global.performance = global.performance || {
   now: () => new Date().getTime(),
 };
-
-
 
 interface LayoutProps {
   children: any;
@@ -30,13 +28,9 @@ function AppLayout({ children }: LayoutProps) {
           disableTransitionOnChange
         >
           <div
-            className={cn(
-              "min-h-screen antialiased relative dark:bg-gradient"
-            )}
+            className={cn("min-h-screen antialiased relative dark:bg-gradient")}
           >
-            <Layout>
-              {children}
-            </Layout>
+            {children}
           </div>
         </ThemeProvider>
       </body>
