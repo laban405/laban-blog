@@ -451,7 +451,7 @@ export default function LabanMogirePortfolio() {
         </p>
         <div style={S.heroCta}>
           <Button variant="default" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior:"smooth" })}>
-            Let's Work Together →
+            Let&apos;s Work Together →
           </Button>
           <Button variant="outline" size="lg" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior:"smooth" })}>
             See My Work
@@ -488,12 +488,12 @@ export default function LabanMogirePortfolio() {
       <div style={S.sectionWrap} id="about">
         <div style={{ ...S.section, display:"grid", gridTemplateColumns:"1fr 1fr", gap:"6rem", alignItems:"start" }}>
           <Reveal>
-            <SectionTag>// About</SectionTag>
+            <SectionTag>{"// About"}</SectionTag>
             <SectionTitle>I Fix Messy.<br/>I Build Lasting.</SectionTitle>
             <div style={{ marginTop:"2rem", display:"flex", flexDirection:"column", gap:"1.25rem", color:"hsl(var(--muted-foreground))", fontSize:"1.05rem", lineHeight:1.8 }}>
-              <p>I'm a Senior Frontend Engineer who specializes in <strong style={{ color:"hsl(var(--foreground))", fontWeight:600 }}>frontend systems that stay clean as products scale.</strong> Most of my work involves stepping into complex, aging codebases and rebuilding them into structured, predictable foundations.</p>
-              <p>I've shipped across <strong style={{ color:"hsl(var(--foreground))", fontWeight:600 }}>e-commerce, fintech, transport, IoT,</strong> and large internal tools. I define patterns, establish shared building blocks, and align UI behavior across devices and network conditions.</p>
-              <p>The goal is always the same: architecture that's invisible to users and frictionless for the team building it.</p>
+              <p>I&apos;m a Senior Frontend Engineer who specializes in <strong style={{ color:"hsl(var(--foreground))", fontWeight:600 }}>frontend systems that stay clean as products scale.</strong> Most of my work involves stepping into complex, aging codebases and rebuilding them into structured, predictable foundations.</p>
+              <p>I&apos;ve shipped across <strong style={{ color:"hsl(var(--foreground))", fontWeight:600 }}>e-commerce, fintech, transport, IoT,</strong> and large internal tools. I define patterns, establish shared building blocks, and align UI behavior across devices and network conditions.</p>
+              <p>The goal is always the same: architecture that&apos;s invisible to users and frictionless for the team building it.</p>
             </div>
             <div style={{ marginTop:"2rem", display:"flex", flexWrap:"wrap", gap:"0.5rem" }}>
               {SKILLS.map(s => <Badge key={s}>{s}</Badge>)}
@@ -511,7 +511,7 @@ export default function LabanMogirePortfolio() {
               color: "hsl(var(--foreground))",
               marginTop: "4rem",
             }}>
-              "Good frontend architecture should fade into the background for users — and remove friction for the people building it."
+              &quot;Good frontend architecture should fade into the background for users — and remove friction for the people building it.&quot;
             </div>
             <div style={{ marginTop:"3rem", padding:"2rem", background:"hsl(var(--card))", border:"1px solid hsl(var(--border))", borderRadius:"var(--radius)" }}>
               <p style={{ fontFamily:"'DM Mono',monospace", fontSize:"0.68rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"hsl(var(--muted-foreground))", marginBottom:"1rem" }}>Currently open to</p>
@@ -533,7 +533,7 @@ export default function LabanMogirePortfolio() {
           <Reveal>
             <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:"3.5rem" }}>
               <div>
-                <SectionTag>// Services</SectionTag>
+                <SectionTag>{"// Services"}</SectionTag>
                 <SectionTitle>What I Bring<br/>to the Table</SectionTitle>
               </div>
             </div>
@@ -577,7 +577,7 @@ export default function LabanMogirePortfolio() {
       <div style={S.sectionWrap} id="projects">
         <div style={S.section}>
           <Reveal>
-            <SectionTag>// Featured Work</SectionTag>
+            <SectionTag>{"// Featured Work"}</SectionTag>
             <SectionTitle>Projects That<br/>Shipped.</SectionTitle>
           </Reveal>
           <div style={{ marginTop:"3.5rem", borderTop:"1px solid hsl(var(--border))" }}>
@@ -622,8 +622,8 @@ export default function LabanMogirePortfolio() {
       <div style={S.sectionWrap} id="experience">
         <div style={S.section}>
           <Reveal>
-            <SectionTag>// Experience</SectionTag>
-            <SectionTitle>Where I've Done<br/>the Work</SectionTitle>
+            <SectionTag>{"// Experience"}</SectionTag>
+            <SectionTitle>Where I&apos;ve Done<br/>the Work</SectionTitle>
           </Reveal>
           <div style={{ marginTop:"3.5rem" }}>
             {EXPERIENCE.map((e, i) => (
@@ -661,7 +661,7 @@ export default function LabanMogirePortfolio() {
         }} />
         <div style={{ ...S.section, textAlign:"center", padding:"9rem 4rem" }}>
           <Reveal>
-            <SectionTag>// Let's Talk</SectionTag>
+            <SectionTag>{"// Let's Talk"}</SectionTag>
             <h2 style={{
               fontFamily:"'Syne',sans-serif", fontWeight:800,
               fontSize:"clamp(2.5rem, 6vw, 5rem)",

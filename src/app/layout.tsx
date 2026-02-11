@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 import { ThemeProvider } from "../providers/theme-provider";
 import "../styles/globals.css";
 
-global.performance = global.performance || {
+(global as any).performance = global.performance || {
   now: () => new Date().getTime(),
 };
 
