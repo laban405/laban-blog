@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, useRef } from "react";
 
 /* ─────────────────────────────────────────
@@ -329,6 +330,7 @@ export default function LabanMogirePortfolio() {
     document.documentElement.classList.add("dark");
   }, []);
 
+  /** @type {{ [key: string]: import('react').CSSProperties }} */
   const S = {
     /* layout */
     page:    { minHeight: "100vh", overflowX: "hidden" },

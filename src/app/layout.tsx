@@ -1,5 +1,4 @@
 import React from "react";
-import { josefin, cardo } from "./fonts";
 import { cn } from "../lib/utils";
 
 import { ThemeProvider } from "../providers/theme-provider";
@@ -18,9 +17,9 @@ function AppLayout({ children }: LayoutProps) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${josefin.variable} ${cardo.variable} h-full bg-primary text-base antialiased`}
+      className="h-full bg-primary text-base antialiased"
     >
-      <body className="flex min-h-full flex-col font-josefin">
+      <body className="flex min-h-full flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
