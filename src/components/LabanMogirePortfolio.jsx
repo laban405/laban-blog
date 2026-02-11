@@ -138,7 +138,7 @@ function useReveal() {
     with real shadcn imports in your project)
    ──────────────────────────────────────────────── */
 
-const Button = ({ children, variant = "default", size = "default", className, ...props }) => {
+const Button = ({ children, variant = "default", size = "default", className = "", ...props }) => {
   const base = {
     display: "inline-flex", alignItems: "center", justifyContent: "center",
     gap: "0.5rem", fontFamily: "'Syne', sans-serif", fontWeight: 700,
@@ -228,7 +228,7 @@ const Separator = ({ orientation = "horizontal" }) => (
   }} />
 );
 
-const Card = ({ children, style, onMouseEnter, onMouseLeave }) => (
+const Card = ({ children, style = {}, onMouseEnter = () => {}, onMouseLeave = () => {} }) => (
   <div
     style={{
       background: "hsl(var(--card))",
@@ -424,8 +424,8 @@ export default function LabanMogirePortfolio() {
           {["About","Services","Projects","Experience","Contact"].map(l => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} style={S.navLink}
-                onMouseEnter={e => e.target.style.color = "hsl(var(--accent))"}
-                onMouseLeave={e => e.target.style.color = "hsl(var(--muted-foreground))"}
+                onMouseEnter={e => e.currentTarget.style.color = "hsl(var(--accent))"}
+                onMouseLeave={e => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}
               >{l}</a>
             </li>
           ))}
@@ -692,8 +692,8 @@ export default function LabanMogirePortfolio() {
           ].map(l => (
             <li key={l.label}>
               <a href={l.href} style={{ fontFamily:"'DM Mono',monospace", fontSize:"0.68rem", letterSpacing:"0.08em", textTransform:"uppercase", color:"hsl(var(--muted-foreground))", textDecoration:"none", transition:"color 0.2s" }}
-                onMouseEnter={e => e.target.style.color = "hsl(var(--accent))"}
-                onMouseLeave={e => e.target.style.color = "hsl(var(--muted-foreground))"}
+                onMouseEnter={e => e.currentTarget.style.color = "hsl(var(--accent))"}
+                onMouseLeave={e => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}
               >{l.label}</a>
             </li>
           ))}
