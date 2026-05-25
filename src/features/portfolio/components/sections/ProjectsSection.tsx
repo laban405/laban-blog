@@ -1,9 +1,0 @@
-import { useState } from "react";
-import { PROJECTS } from "../../constants";
-import { S } from "../../styles";
-import { Badge, Reveal, SectionTag, SectionTitle } from "../ui";
-
-export function ProjectsSection() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  return <div style={S.sectionWrap} id="projects"><div style={S.section}><Reveal><SectionTag>{"// Featured Work"}</SectionTag><SectionTitle>Projects That<br />Shipped.</SectionTitle></Reveal><div style={{ marginTop: "3.5rem", borderTop: "1px solid hsl(var(--border))" }}>{PROJECTS.map((p, i) => <Reveal key={p.idx} delay={i * 60}><div onMouseEnter={() => setHoveredProject(i)} onMouseLeave={() => setHoveredProject(null)} style={{ display: "grid", gridTemplateColumns: "60px 1fr auto auto", gap: "2rem", alignItems: "center", padding: hoveredProject === i ? "2rem 2rem 2rem 3rem" : "2rem", borderBottom: "1px solid hsl(var(--border))", cursor: "pointer", transition: "padding 0.3s", color: "inherit" }}><span style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.68rem", color: "hsl(var(--muted-foreground))", letterSpacing: "0.06em" }}>{p.idx}</span><div><div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.3rem", letterSpacing: "-0.03em", color: hoveredProject === i ? "hsl(var(--accent))" : "hsl(var(--foreground))", transition: "color 0.25s" }}>{p.title}</div><div style={{ fontSize: "0.85rem", color: "hsl(var(--muted-foreground))", marginTop: "0.3rem", maxWidth: "50ch" }}>{p.desc}</div></div><Badge>{p.type}</Badge><span style={{ color: "hsl(var(--accent))", fontSize: "1.2rem", opacity: hoveredProject === i ? 1 : 0, transform: hoveredProject === i ? "translateX(0)" : "translateX(-8px)", transition: "opacity 0.25s, transform 0.25s" }}>→</span></div></Reveal>)}</div></div></div>;
-}

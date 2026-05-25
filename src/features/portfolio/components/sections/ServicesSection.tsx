@@ -1,9 +1,0 @@
-import { useState } from "react";
-import { SERVICES } from "../../constants";
-import { S } from "../../styles";
-import { Reveal, SectionTag, SectionTitle } from "../ui";
-
-export function ServicesSection() {
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
-  return <div style={S.sectionWrap} id="services"><div style={S.section}><Reveal><div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3.5rem" }}><div><SectionTag>{"// Services"}</SectionTag><SectionTitle>What I Bring<br />to the Table</SectionTitle></div></div></Reveal><Reveal delay={100}><div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "hsl(var(--border))", border: "1px solid hsl(var(--border))" }}>{SERVICES.map((svc, i) => <div key={svc.n} onMouseEnter={() => setHoveredService(i)} onMouseLeave={() => setHoveredService(null)} style={{ background: hoveredService === i ? "hsl(var(--card))" : "hsl(var(--background))", padding: "2.5rem", position: "relative", overflow: "hidden", transition: "background 0.3s", cursor: "default" }}><div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "2px", background: "hsl(var(--accent))", transform: hoveredService === i ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "transform 0.35s ease" }} /><div style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.62rem", color: "hsl(var(--muted-foreground))", letterSpacing: "0.1em", marginBottom: "1.5rem" }}>{svc.n}</div><div style={{ fontSize: "1.4rem", marginBottom: "0.85rem" }}>{svc.icon}</div><h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "-0.02em", marginBottom: "0.75rem", color: "hsl(var(--foreground))" }}>{svc.title}</h3><p style={{ fontSize: "0.875rem", color: "hsl(var(--muted-foreground))", lineHeight: 1.65 }}>{svc.desc}</p></div>)}</div></Reveal></div></div>;
-}

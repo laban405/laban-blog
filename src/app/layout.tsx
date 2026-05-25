@@ -1,7 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
 import { cn } from "../lib/utils";
-
 import { ThemeProvider } from "../providers/theme-provider";
 import "../styles/globals.css";
 
