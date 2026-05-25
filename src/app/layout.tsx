@@ -1,4 +1,5 @@
 import React from "react";
+import localFont from "next/font/local";
 import { cn } from "../lib/utils";
 
 import { ThemeProvider } from "../providers/theme-provider";
@@ -7,6 +8,28 @@ import "../styles/globals.css";
 (global as any).performance = global.performance || {
   now: () => new Date().getTime(),
 };
+
+const stackSansText = localFont({
+  src: [
+    { path: "../../public/fonts/stack/stack-sans-text-400.ttf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-text-500.ttf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-text-600.ttf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-text-700.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-stack-sans-text",
+  display: "swap",
+});
+
+const stackSansNotch = localFont({
+  src: [
+    { path: "../../public/fonts/stack/stack-sans-notch-400.ttf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-500.ttf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-600.ttf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-700.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-stack-sans-notch",
+  display: "swap",
+});
 
 interface LayoutProps {
   children: any;
@@ -17,7 +40,11 @@ function AppLayout({ children }: LayoutProps) {
     <html
       lang="en"
       suppressHydrationWarning
-      className="h-full bg-primary text-base antialiased"
+      className={cn(
+        "h-full bg-primary text-base antialiased",
+        stackSansText.variable,
+        stackSansNotch.variable,
+      )}
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider
@@ -26,9 +53,7 @@ function AppLayout({ children }: LayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div
-            className={cn("min-h-screen antialiased relative dark:bg-gradient")}
-          >
+          <div className={cn("min-h-screen antialiased relative dark:bg-gradient")}>
             {children}
           </div>
         </ThemeProvider>
