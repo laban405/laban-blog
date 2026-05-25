@@ -1,0 +1,6 @@
+import { S } from "../../styles";
+import { Button, Reveal, SectionTag } from "../ui";
+
+export function CtaSection() {
+  return <div style={{ ...S.sectionWrap, position: "relative", overflow: "hidden" }} id="contact"><div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "600px", height: "600px", background: "radial-gradient(circle, hsla(var(--accent), 0.06) 0%, transparent 70%)", pointerEvents: "none" }} /><div style={{ ...S.section, textAlign: "center", padding: "9rem 4rem" }}><Reveal><SectionTag>{"// Let's Talk"}</SectionTag><h2 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(2.5rem, 6vw, 5rem)", letterSpacing: "-0.05em", lineHeight: 1, marginBottom: "1.5rem", color: "hsl(var(--foreground))" }}>The Right Engineer<br />for the <span style={{ color: "hsl(var(--accent))" }}>Right Problem.</span></h2><p style={{ color: "hsl(var(--muted-foreground))", maxWidth: "48ch", margin: "0 auto 3rem", fontSize: "1.05rem", lineHeight: 1.7 }}>Scalable architecture, high-quality UI, or a frontend that finally performs — I bring structure, clarity, and craft to every engagement.</p><Button variant="default" size="lg" onClick={() => { window.location.href = "mailto:laban405@gmail.com"; }}>laban405@gmail.com →</Button></Reveal></div></div>;
+}
