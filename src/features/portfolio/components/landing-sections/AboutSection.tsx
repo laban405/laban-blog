@@ -5,17 +5,54 @@ export function AboutSection() {
     <section id="about" className="section">
       <div className="container about-wrap">
         <div>
-          <h2 className="sec-title">About Me</h2>
-          <p className="muted">I&apos;m Fin Harper, a UI/UX designer with over 15 years of experience transforming ideas into engaging digital products for agencies, startups, and established businesses.</p>
+          <h2 className="sec-title mb-4">About Me</h2>
+          {/* <p className="mb-2">
+            I&apos;m a Senior Frontend Engineer based in Nairobi, Kenya,
+            specializing in scalable frontend systems and AI-powered product
+            experiences.{" "}
+          </p> */}
+          <p className="mb-2">
+            Over 6+ years I&apos;ve shipped across fintech, IoT, transport and
+            enterprise, stepping into complex codebases and rebuilding them into
+            clean, maintainable foundations that teams can actually grow with.
+          </p>
+          <p className="">
+            Now I bring that same architectural discipline to AI integration:
+            connecting products to LLMs, building agentic workflows, and
+            creating conversational UIs using the Anthropic Claude API, Vercel
+            AI SDK, and LangChain.js — on top of the React, Next.js, and Angular
+            stack I&apos;ve been mastering for years.
+          </p>
         </div>
         <div className="portrait-block">
-          <Image src="/assets/xavier.jpeg" alt="Portrait" width={430} height={430} />
+          <Image
+            src="/assets/xavier.jpeg"
+            alt="Portrait"
+            width={430}
+            height={430}
+          />
         </div>
         <div className="stats-col">
-          <div><div className="n">3.5K+</div><div className="muted">Happy Clients</div></div>
-          <div><div className="n">10+</div><div className="muted">Years of Expertise</div></div>
-          <div><div className="n">600+</div><div className="muted">Project Collaborations</div></div>
+          <div>
+            <div className="n">3.5K+</div>
+            <div className="muted">Happy Clients</div>
+          </div>
+          <div>
+            <div className="n">10+</div>
+            <div className="muted">Years of Expertise</div>
+          </div>
+          <div>
+            <div className="n">600+</div>
+            <div className="muted">Project Collaborations</div>
+          </div>
         </div>
+      </div>
+      <div>
+        <p className="italic text-center mt-8">The goal is always the same</p>
+        <p className="italic text-center mb-8">
+          Architecture invisible to users, frictionless for builders. The
+          difference now is it can also think.
+        </p>
       </div>
     </section>
   );

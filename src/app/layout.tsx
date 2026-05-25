@@ -48,8 +48,9 @@ function AppLayout({ children }: LayoutProps) {
       <body className="flex min-h-full flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          forcedTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className={cn("min-h-screen antialiased relative dark:bg-gradient")}>

@@ -6,6 +6,7 @@ export function FooterSection() {
         <h2 className="hero-line">Let&apos;s Chat!</h2>
         <div className="footer-meta muted">Pages · Home · About · Project · Contact</div>
       </div>
+         <h3 className="hero-subtitle text-center mt-8">I Build Interfaces That Think</h3>
     </footer>
   );
 }

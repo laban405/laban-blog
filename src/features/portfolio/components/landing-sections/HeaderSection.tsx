@@ -3,14 +3,14 @@ export function HeaderSection() {
     <>
       <div className="micro-top">
         <div className="container micro-top-inner">
-          <span>ww</span>
+          <span></span>
           <span>Trusted by worldwide teams</span>
         </div>
       </div>
 
       <header className="topnav">
         <div className="container topnav-inner">
-          <div className="brand">Fin Harper</div>
+          <div className="brand">Laban Mogire</div>
           <nav className="nav-links">
             <a href="#">Home</a>
             <a href="#about">About</a>

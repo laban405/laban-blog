@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-import { globalStyles } from "./styles";
 import { HeaderSection } from "./components/landing-sections/HeaderSection";
 import { HeroSection } from "./components/landing-sections/HeroSection";
 import { AboutSection } from "./components/landing-sections/AboutSection";
@@ -14,16 +12,6 @@ import { ContactSection } from "./components/landing-sections/ContactSection";
 import { FooterSection } from "./components/landing-sections/FooterSection";
 
 export default function PortfolioFeature() {
-  useEffect(() => {
-    const id = "laban-global-styles";
-    if (!document.getElementById(id)) {
-      const style = document.createElement("style");
-      style.id = id;
-      style.textContent = globalStyles;
-      document.head.appendChild(style);
-    }
-  }, []);
-
   return (
     <main>
       <HeaderSection />
