@@ -10,7 +10,8 @@ html {
   box-sizing: border-box;
 }
 
-@layer base {}
+@layer base {
+}
 
 /* Animations */
 @keyframes fadeUp {
@@ -58,34 +59,27 @@ html {
 
 :root {
   /* shadcn-style theme tokens */
-  --background: 220 18% 93%;
-  --foreground: 224 15% 15%;
-  --card: 220 20% 95%;
-  --card-foreground: 224 15% 15%;
-  --popover: 220 20% 95%;
-  --popover-foreground: 224 15% 15%;
-  --primary: 250 86% 69%;
+  --background: 48 10% 95%;
+  --foreground: theme(colors.zinc.900);
+  --card: 48 8% 94%;
+  --card-foreground: 0 0% 7%;
+  --popover: 48 8% 94%;
+  --popover-foreground: 0 0% 7%;
+  --primary: 152 43% 33%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 220 12% 88%;
-  --secondary-foreground: 224 15% 20%;
-  --muted: 220 12% 85%;
-  --muted-foreground: 224 10% 42%;
-  --accent: 250 86% 69%;
+  --secondary: 48 8% 90%;
+  --secondary-foreground: 0 0% 11%;
+  --muted: 48 8% 90%;
+  --muted-foreground: 0 0% 42%;
+  --accent: 152 43% 33%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 98%;
-  --border: 220 12% 80%;
-  --input: 220 12% 80%;
-  --ring: 250 86% 69%;
+  --border: 145 6% 80%;
+  --input: 145 6% 80%;
+  --ring: 152 43% 33%;
   --radius: 0.5rem;
 
-  /* page-specific aliases */
-  --bg: hsl(var(--background));
-  --bg-top: #f6f7f8;
-  --text: hsl(var(--foreground));
-  --line: hsl(var(--border));
-  --accent-2: #6a57dd;
-  --footer: #1f242c;
 }
 
 .dark {
@@ -111,8 +105,13 @@ html {
 }
 
 body {
-  background: radial-gradient(1200px 600px at 10% 0%, var(--bg-top) 0%, var(--bg) 45%, #e8ebf0 100%);
-  color: var(--text);
+  background: radial-gradient(
+    1200px 600px at 10% 0%,
+    color-mix(in srgb, hsl(var(--background)) 80%, hsl(var(--secondary)) 20%) 0%,
+    hsl(var(--background)) 45%,
+    color-mix(in srgb, hsl(var(--background)) 70%, hsl(var(--muted)) 30%) 100%
+  );
+  color: hsl(var(--foreground));
   font-family: var(--font-stack-sans-text), sans-serif;
 
 }
@@ -141,8 +140,9 @@ button {
 
 }
 
-p{
-    line-height: 1.8;
+p {
+  line-height: 1.8;
+  @apply text-zinc-800;
 }
 
 a {
@@ -168,13 +168,13 @@ a {
 }
 
 .section {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid hsl(var(--border));
   padding: 90px 0;
 }
 
 .micro-top {
   height: 22px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid hsl(var(--border));
 }
 
 .micro-top-inner {
@@ -190,8 +190,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 60;
-  border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 88%, #fff 12%);
+  background: color-mix(in srgb, hsl(var(--background)) 88%, hsl(var(--secondary)) 12%);
   backdrop-filter: blur(8px);
 }
 
@@ -204,8 +203,8 @@ a {
 }
 
 .brand {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  /* font-weight: 600; */
   letter-spacing: -0.03em;
 }
 
@@ -217,7 +216,7 @@ a {
   letter-spacing: 0.14em;
 }
 
-.pill-btn,
+
 .ghost-pill {
   border-radius: 999px;
   padding: 10px 22px;
@@ -227,24 +226,16 @@ a {
   cursor: pointer;
 }
 
-.pill-btn {
-  border: 1px solid hsl(var(--primary));
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-}
+
 
 .ghost-pill {
-  border: 1px solid var(--text);
-  color: var(--text);
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
   background: transparent;
 }
 
 
-.hero-title {
-  font-size: clamp(48px, 7vw, 72px);
-  max-width: 900px;
-  letter-spacing: -0.045em;
-}
+
 
 .hero-subtitle {
   font-size: 16px;
@@ -264,19 +255,12 @@ a {
   letter-spacing: -0.03em;
 }
 
-.row-social {
-  margin-top: 34px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+
 
 .socials {
   display: flex;
   gap: 18px;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -299,7 +283,7 @@ a {
 
 .portrait-block {
   border-radius: 8px;
-  background: var(--accent);
+  background: hsl(var(--accent));
   min-height: 330px;
   display: flex;
   align-items: flex-end;
@@ -330,17 +314,44 @@ a {
   gap: 12px;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.skill-card {
+  min-height: 230px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: color-mix(in srgb, hsl(var(--background)) 78%, hsl(var(--card)) 22%);
+  font-size: 12px;
+  color: hsl(var(--foreground));
+}
+
 .card {
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
   border-radius: 8px;
   min-height: 190px;
   padding: 22px;
 }
 
 .card.cta {
-  background: #d8d1ff;
-  border-color: #c6baff;
+  background: color-mix(in srgb, hsl(var(--primary)) 15%, hsl(var(--card)) 85%);
+  border-color: color-mix(in srgb, hsl(var(--primary)) 24%, hsl(var(--border)) 76%);
 }
 
 .card-title {
@@ -357,8 +368,50 @@ a {
 }
 
 .list-line {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid hsl(var(--border));
   padding: 16px 0;
+}
+
+.career-item {
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+.career-summary {
+  margin-top: 8px;
+}
+
+.career-expand {
+  display: grid;
+  gap: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.career-item:hover .career-expand {
+  max-height: 340px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.career-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: hsl(var(--muted-foreground));
+  display: grid;
+  gap: 6px;
+}
+
+.career-bullets li {
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .list-line .top {
@@ -370,7 +423,7 @@ a {
 }
 
 .score {
-  color: var(--accent);
+  color: hsl(var(--accent));
   font-size: 16px;
   white-space: nowrap;
 }
@@ -395,7 +448,7 @@ a {
 }
 
 .testi-list .item {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid hsl(var(--border));
   padding: 26px 0;
   display: grid;
   grid-template-columns: 170px 220px 1fr;
@@ -446,14 +499,14 @@ a {
   background: transparent;
   padding: 10px 0;
   font-size: 14px;
-  color: var(--text);
+  color: hsl(var(--foreground));
   outline: none;
 }
 
 .footer-dark {
   margin-top: 0;
   padding: 72px 0 44px;
-  background: var(--footer);
+  background: hsl(var(--foreground));
   color: #f0f3f8;
 }
 
@@ -485,6 +538,7 @@ a {
   }
 
   .cards,
+  .skills-grid,
   .updates-grid {
     grid-template-columns: 1fr;
   }

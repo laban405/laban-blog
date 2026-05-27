@@ -4,7 +4,9 @@ import { HeaderSection } from "./components/landing-sections/HeaderSection";
 import { HeroSection } from "./components/landing-sections/HeroSection";
 import { AboutSection } from "./components/landing-sections/AboutSection";
 import { ServicesSection } from "./components/landing-sections/ServicesSection";
-import { ExpertiseSection } from "./components/landing-sections/ExpertiseSection";
+import { SkillsSection } from "./components/landing-sections/SkillsSection";
+import { ProjectsSection } from "./components/landing-sections/ProjectsSection";
+import { CtaSection } from "./components/landing-sections/CtaSection";
 import { CareerSection } from "./components/landing-sections/CareerSection";
 import { TestimonialsSection } from "./components/landing-sections/TestimonialsSection";
 import { UpdatesSection } from "./components/landing-sections/UpdatesSection";
@@ -18,10 +20,12 @@ export default function PortfolioFeature() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <ExpertiseSection />
+      <SkillsSection />
+      <ProjectsSection />
       <CareerSection />
       <TestimonialsSection />
-      <UpdatesSection />
+      <CtaSection />
+      {/* <UpdatesSection /> */}
       <ContactSection />
       <FooterSection />
     </main>

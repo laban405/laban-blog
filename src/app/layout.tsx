@@ -8,12 +8,12 @@ import "../styles/globals.css";
   now: () => new Date().getTime(),
 };
 
-const stackSansText = localFont({
+const mozillaText = localFont({
   src: [
-    { path: "../../public/fonts/stack/stack-sans-text-400.ttf", weight: "400", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-text-500.ttf", weight: "500", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-text-600.ttf", weight: "600", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-text-700.ttf", weight: "700", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-400.ttf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-500.ttf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-600.ttf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-700.ttf", weight: "700", style: "normal" },
   ],
   variable: "--font-stack-sans-text",
   display: "swap",
@@ -41,7 +41,7 @@ function AppLayout({ children }: LayoutProps) {
       suppressHydrationWarning
       className={cn(
         "h-full bg-primary text-base antialiased",
-        stackSansText.variable,
+        mozillaText.variable,
         stackSansNotch.variable,
       )}
     >

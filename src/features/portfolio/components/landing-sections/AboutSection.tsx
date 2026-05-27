@@ -17,7 +17,7 @@ export function AboutSection() {
             clean, maintainable foundations that teams can actually grow with.
           </p>
           <p className="">
-            Now I bring that same architectural discipline to AI integration:
+            Now I bring that same architectural discipline to AI integration,
             connecting products to LLMs, building agentic workflows, and
             creating conversational UIs using the Anthropic Claude API, Vercel
             AI SDK, and LangChain.js — on top of the React, Next.js, and Angular
@@ -34,15 +34,15 @@ export function AboutSection() {
         </div>
         <div className="stats-col">
           <div>
-            <div className="n">3.5K+</div>
-            <div className="muted">Happy Clients</div>
+            <div className="n">5+</div>
+            <div className="muted">Industries Served</div>
+          </div>
+          <div>
+            <div className="n">6+</div>
+            <div className="muted">Years Building</div>
           </div>
           <div>
             <div className="n">10+</div>
-            <div className="muted">Years of Expertise</div>
-          </div>
-          <div>
-            <div className="n">600+</div>
             <div className="muted">Project Collaborations</div>
           </div>
         </div>
