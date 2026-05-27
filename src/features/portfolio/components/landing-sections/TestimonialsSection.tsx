@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Program Director",
     title: "Enterprise IoT Operations",
-    company: "Kamsware",
+    company: "Kamsware Ltd",
     stars: "★★★★★",
     quote:
       "He designed our hardware-connected frontend architecture so well that provisioning and diagnostics across 5,000+ devices became predictable, fast, and dramatically more efficient for field teams.",

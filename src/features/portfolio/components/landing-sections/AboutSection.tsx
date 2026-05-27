@@ -22,7 +22,7 @@ export function AboutSection() {
             Now I bring that same architectural discipline to AI integration,
             connecting products to LLMs, building agentic workflows, and
             creating conversational UIs using the Anthropic Claude API, Vercel
-            AI SDK, and LangChain.js — on top of the React, Next.js, and Angular
+            AI SDK, and LangChain.js, on top of the React, Next.js, and Angular
             stack I&apos;ve been mastering for years.
           </p>
         </div>
