@@ -141,7 +141,7 @@ button {
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.8 !important;
   @apply text-zinc-800;
 }
 
@@ -503,14 +503,9 @@ a {
   outline: none;
 }
 
-.footer-dark {
-  margin-top: 0;
-  padding: 72px 0 44px;
-  background: hsl(var(--foreground));
-  color: #f0f3f8;
-}
 
-.footer-dark .hero-line {
+
+ .hero-line {
   font-size: clamp(62px, 8.5vw, 98px);
   letter-spacing: -0.045em;
   margin: 10px 0 24px;

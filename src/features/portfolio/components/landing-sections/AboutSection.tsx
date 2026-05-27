@@ -5,18 +5,20 @@ export function AboutSection() {
     <section id="about" className="section">
       <div className="container about-wrap">
         <div>
+        <p className="uppercase text-zinc-500 text-sm">toptal vetted</p>
+
           <h2 className="sec-title mb-4">About Me</h2>
           {/* <p className="mb-2">
             I&apos;m a Senior Frontend Engineer based in Nairobi, Kenya,
             specializing in scalable frontend systems and AI-powered product
             experiences.{" "}
           </p> */}
-          <p className="mb-2">
+          <p className="mb-2 text-sm leading-[1.8]">
             Over 6+ years I&apos;ve shipped across fintech, IoT, transport and
             enterprise, stepping into complex codebases and rebuilding them into
             clean, maintainable foundations that teams can actually grow with.
           </p>
-          <p className="">
+          <p className="text-sm leading-[1.8]">
             Now I bring that same architectural discipline to AI integration,
             connecting products to LLMs, building agentic workflows, and
             creating conversational UIs using the Anthropic Claude API, Vercel
@@ -35,15 +37,15 @@ export function AboutSection() {
         <div className="stats-col">
           <div>
             <div className="n">5+</div>
-            <div className="muted">Industries Served</div>
+            <div className="uppercase text-zinc-500 text-xs mt-2">Industries Served</div>
           </div>
           <div>
             <div className="n">6+</div>
-            <div className="muted">Years Building</div>
+            <div className="uppercase text-zinc-500 text-xs mt-2">Years Building</div>
           </div>
           <div>
             <div className="n">10+</div>
-            <div className="muted">Project Collaborations</div>
+            <div className="uppercase text-zinc-500 text-xs mt-2">Project Collaborations</div>
           </div>
         </div>
       </div>

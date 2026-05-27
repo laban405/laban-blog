@@ -1,12 +1,18 @@
 export function FooterSection() {
   return (
-    <footer className="footer-dark">
+    <footer className="bg-primary text-primary-foreground py-8">
       <div className="container">
-        <p className="caps">Got a project in mind?</p>
+        <p className="text-primary-foreground">Got a project in mind?</p>
         <h2 className="hero-line">Let&apos;s Chat!</h2>
-        <div className="footer-meta muted">Pages · Home · About · Project · Contact</div>
+         <nav className="nav-links">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+           <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
       </div>
-         <h3 className="hero-subtitle text-center mt-8">I Build Interfaces That Think</h3>
+         {/* <h3 className="hero-subtitle text-center mt-8">I Build Interfaces That Think</h3> */}
     </footer>
   );
 }

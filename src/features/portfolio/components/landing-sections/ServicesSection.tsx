@@ -2,9 +2,9 @@ import { services } from "../../data";
 
 export function ServicesSection() {
   return (
-    <section className="section">
+    <section className="section" id='services'>
       <div className="container">
-        <h2 className="sec-title">What I Will Do For You?</h2>
+        <h2 className="sec-title">What <span className="text-primary">I Will Do</span> For You?</h2>
         <div className="cards">
           {services.map((service) => (
             <article className="card" key={service.id}>

@@ -112,7 +112,7 @@ export const projects = [
 export const careerItems = [
   {
     period: "Nov 2023 — Present",
-    company: "Kamsware",
+    company: "Kamsware LTD",
     role: "Senior Frontend Engineer",
     summary: "Built and scaled hardware-connected frontend systems for 5,000+ IoT devices with a 96% provisioning and diagnostics efficiency improvement.",
     bullets: [

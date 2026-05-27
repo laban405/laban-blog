@@ -69,7 +69,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="section">
+    <section className="section" id='contact'>
       <div className="container contact-grid">
         <div>
           <h2 className="sec-title">Contact Me</h2>
@@ -78,13 +78,13 @@ export function ContactSection() {
             quick conversation.
           </p>
           <div className="contact-lines muted">
-            <p>
+            <p className="hover:text-primary hover:underline">
               <a href="mailto:laban405@gmail.com">laban405@gmail.com</a>
             </p>
-            <p>
+            <p className="hover:text-primary hover:underline">
               <a href="tel:+254797313732">+254 797 313 732</a>
             </p>
-            <p>DAGORETTI, NGONG ROAD, NAIROBI</p>
+            {/* <p>DAGORETTI, NGONG ROAD, NAIROBI</p> */}
           </div>
         </div>
 

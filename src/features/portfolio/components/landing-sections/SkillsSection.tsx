@@ -4,7 +4,7 @@ export function SkillsSection() {
   return (
     <section className="section" id="skills">
       <div className="container">
-        <h2 className="sec-title">Expertise</h2>
+        <h2 className="sec-title"><span className="text-primary">Expert</span>ise</h2>
         <p className="muted" style={{ maxWidth: "36ch", marginTop: "10px" }}>
           A rare combination of depth and breadth
         </p>

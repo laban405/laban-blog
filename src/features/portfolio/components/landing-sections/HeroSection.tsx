@@ -15,12 +15,12 @@ export function HeroSection() {
           <div className="mb-4 text-[46px] font-bold tracking-[-0.03em]">
             #10+
           </div>
-          <p className="text-[11px] uppercase tracking-[0.12em] text-[hsl(var(--muted-foreground))]">
+          <p className="text-[11px] uppercase tracking-[0.12em] text-zinc-500">
             Completed Projects
           </p>
         </div>
         <div className="min-h-[100px] flex flex-col justify-center">
-          <p className="text-base text-[hsl(var(--muted-foreground))] leading-[1.8]">
+          <p className="text-sm leading-[1.8]">
             <span className="font-semibold">I&apos;m Laban Mogire</span>, a
             Senior Frontend Engineer who specializes in frontend systems that
             stay clean as products scale, and increasingly, systems that use AI
@@ -29,15 +29,17 @@ export function HeroSection() {
         </div>
       </div>
       <div className="mt-24 flex justify-between items-center gap-4 flex-wrap">
-       
-        <AnimatedButton className="border-primary text-primary bg-transparent">  Let&apos;s Work Together →</AnimatedButton>
-
+        <a href="#contact">
+          <AnimatedButton className="border-primary text-primary bg-transparent">
+            Let&apos;s Work Together →
+          </AnimatedButton>
+        </a>
         <div className="flex gap-[18px] text-[14px] uppercase tracking-[0.12em]">
           <a
             href="https://github.com/laban405"
             target="_blank"
             rel="noreferrer"
-            className="flex gap-2 items-center"
+            className="flex gap-2 items-center text-zinc-500 hover:underline hover:text-primary"
           >
             <GithubIcon className="h-6 w-6" />
             <span>Github</span>
@@ -46,7 +48,7 @@ export function HeroSection() {
             href="https://www.linkedin.com/in/laban405/"
             target="_blank"
             rel="noreferrer"
-            className="flex gap-2 items-center"
+            className="flex gap-2 items-center text-zinc-500 hover:underline hover:text-primary"
           >
             <LinkedInIcon className="h-7 w-7" />
             <span>LinkedIn</span>

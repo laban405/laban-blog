@@ -5,12 +5,18 @@ export function CareerSection() {
     <section className="section">
       <div className="container career-grid">
         <div>
-          <h2 className="sec-title">Career Highlights</h2>
-          <p className="muted">
+          <h2 className="sec-title"><span className="text-primary">Career</span> Highlights</h2>
+          <p className="muted mb-3">
             Let&apos;s work together, I&apos;m open for part time and freelance
             collaborations for ambitious product teams.
           </p>
-          <button className="pill-btn">Download CV</button>
+          <a
+            href="/LabanFrontendCV2026.pdf"
+            download
+            className="pill-btn inline-flex items-center"
+          >
+            Download CV
+          </a>
         </div>
         <div>
           {careerItems.map((item) => (
@@ -18,7 +24,7 @@ export function CareerSection() {
               className="list-line career-item"
               key={`${item.company}-${item.period}`}
             >
-              <div className="muted company">{item.company}</div>
+              <div className="uppercase text-zinc-500 text-sm mb-1">{`${item.company}`}</div>
               <div className="top">
                 <span>{item.role}</span>
                 <span className="score">{item.period}</span>

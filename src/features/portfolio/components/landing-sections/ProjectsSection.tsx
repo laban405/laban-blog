@@ -4,8 +4,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <p className="caps muted">/ Featured Work</p>
-        <h2 className="sec-title">Projects That<br />Shipped.</h2>
+        <h2 className="sec-title">Projects That<br /><span className="text-primary">Shipped.</span></h2>
 
         <div style={{ marginTop: "28px" }}>
           {projects.map((project) => (
