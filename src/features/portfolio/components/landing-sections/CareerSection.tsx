@@ -26,7 +26,7 @@ export function CareerSection() {
             >
               <div className="uppercase text-zinc-500 text-sm mb-1">{`${item.company}`}</div>
               <div className="top">
-                <span>{item.role}</span>
+                <span className="text-base font-bold">{item.role}</span>
                 <span className="score">{item.period}</span>
               </div>
               <p className="muted career-summary">{item.summary}</p>

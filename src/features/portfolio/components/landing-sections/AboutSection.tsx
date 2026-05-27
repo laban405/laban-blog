@@ -7,7 +7,7 @@ export function AboutSection() {
         <div>
         <p className="uppercase text-zinc-500 text-sm">toptal vetted</p>
 
-          <h2 className="sec-title mb-4">About Me</h2>
+          <h2 className="sec-title mb-4">About <span className="text-primary">Me</span></h2>
           {/* <p className="mb-2">
             I&apos;m a Senior Frontend Engineer based in Nairobi, Kenya,
             specializing in scalable frontend systems and AI-powered product
@@ -28,8 +28,8 @@ export function AboutSection() {
         </div>
         <div className="portrait-block">
           <Image
-            src="/assets/xavier.jpeg"
-            alt="Portrait"
+            src="/assets/picofme.webp"
+            alt="Laban Portrait"
             width={430}
             height={430}
           />
