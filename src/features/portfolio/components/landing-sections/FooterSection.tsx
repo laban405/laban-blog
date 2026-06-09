@@ -29,16 +29,15 @@ export function FooterSection() {
             </AnimatedLink>
           </nav>
         </div>
-        <div className="relative w-[100px] h-[100px] aspect-square shrink-0">
+        <div className="relative w-[100px] h-[100px] aspect-square shrink-0 rounded-full overflow-hidden">
           <Image
-            src="/assets/picofme-nobg-gray.webp"
+            src="/assets/laban_casual.png"
             alt="Laban Mogire Software Engineer"
             fill
             className="object-cover drop-shadow-[0_5px_5px_rgba(0,0,0,0.35)]"
           />
         </div>
       </div>
-      {/* <h3 className="hero-subtitle text-center mt-8">I Build Interfaces That Think</h3> */}
     </footer>
   );
 }
