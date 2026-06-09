@@ -167,45 +167,11 @@ a {
   font-size: 13.5px;
 }
 
-.section {
-  border-top: 1px solid hsl(var(--border));
-  padding: 90px 0;
-}
+
 
 .micro-top {
   height: 22px;
   border-bottom: 1px solid hsl(var(--border));
-}
-
-.micro-top-inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 10px;
-  color: var(--muted);
-}
-
-.topnav {
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  background: color-mix(in srgb, hsl(var(--background)) 88%, hsl(var(--secondary)) 12%);
-  backdrop-filter: blur(8px);
-}
-
-.topnav-inner {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand {
-  font-size: 1.5rem;
-  /* font-weight: 600; */
-  letter-spacing: -0.03em;
 }
 
 .nav-links {
@@ -274,34 +240,10 @@ a {
   text-align: center;
 }
 
-.about-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr 160px;
-  gap: 28px;
-  align-items: center;
-}
 
-.portrait-block {
-  border-radius: 8px;
-  background: hsl(var(--accent));
-  min-height: 330px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-}
 
-.portrait-block img {
-  width: 92%;
-  height: auto;
-}
 
-.stats-col {
-  display: grid;
-  gap: 24px;
-}
-
-.stats-col .n {
+ .n {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -479,14 +421,6 @@ a {
   margin-top: 4px;
 }
 
-.contact-lines {
-  margin-top: 20px;
-}
-
-.contact-lines p {
-  margin: 0 0 8px;
-}
-
 .contact-form {
   display: grid;
   gap: 14px;
@@ -523,7 +457,7 @@ a {
   }
 
   .hero-grid,
-  .about-wrap,
+
   .expertise-grid,
   .career-grid,
   .contact-grid,

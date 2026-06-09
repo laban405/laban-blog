@@ -2,9 +2,8 @@ import { AnimatedButton } from "../../../../components/animated-button";
 
 export function CtaSection() {
   return (
-    <section className="section relative overflow-hidden" id="letstalk">
-      <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 pointer-events-none bg-[radial-gradient(circle,hsla(var(--primary),0.10)_0%,transparent_70%)]" />
-      <div className="container text-center py-10 relative z-10">
+    <section className="scroll-mt-24 sm:min-h-[90vh]" id="letstalk">
+      <div className="max-w-2xl mx-auto text-center py-10 relative z-10 min-h-[100vh] flex flex-col justify-center">
         <p className="uppercase text-zinc-500 text-sm">{"Let's Talk"}</p>
         <h2 className="sec-title mt-3 leading-[1]">
           The Right Engineer
@@ -17,7 +16,7 @@ export function CtaSection() {
           performs — I bring structure, clarity, and craft to every engagement.
         </p>
 
-        <a href="mailto:laban405@gmail.com" className="inline-flex">
+        <a href="mailto:laban405@gmail.com" className="mt-3">
           <AnimatedButton className="bg-primary border-none text-primary-foreground">
             laban405@gmail.com →
           </AnimatedButton>

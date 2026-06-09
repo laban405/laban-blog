@@ -1,11 +1,14 @@
+import { AnimatedButton } from "../../../../components/animated-button";
 import { careerItems } from "../../data";
 
 export function CareerSection() {
   return (
-    <section className="section">
-      <div className="container career-grid">
+    <section className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
+      <div className="max-w-2xl mx-auto mt-16">
         <div>
-          <h2 className="sec-title"><span className="text-primary">Career</span> Highlights</h2>
+          <h2 className="sec-title">
+            <span className="text-primary">Career</span> Highlights
+          </h2>
           <p className="muted mb-3">
             Let&apos;s work together, I&apos;m open for part time and freelance
             collaborations for ambitious product teams.
@@ -15,7 +18,7 @@ export function CareerSection() {
             download
             className="pill-btn inline-flex items-center"
           >
-            Download CV
+            <AnimatedButton>Download CV</AnimatedButton>
           </a>
         </div>
         <div>

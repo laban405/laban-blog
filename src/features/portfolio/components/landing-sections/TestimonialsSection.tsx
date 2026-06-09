@@ -33,13 +33,12 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="section">
-      <div className="container">
+    <section className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
+      <div className="max-w-2xl mx-auto mt-16">
         <div className="testimonial-head">
-          <Image src="/assets/Illustration1.png" alt="Testimonials" width={640} height={222} />
           <div>
-            <h2 className="sec-title">Testimonials</h2>
-            <p className="muted">Creative client narratives grounded in real project outcomes from recent roles.</p>
+            <h2 className="sec-title">Testimonials.</h2>
+            <p className="text-sm">Creative client narratives grounded in real project outcomes from recent roles.</p>
           </div>
         </div>
         <div className="testi-list">

@@ -2,8 +2,8 @@ import { projects } from "../../data";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="section">
-      <div className="container">
+    <section id="projects" className="mx-4 sm:mx-0 sm:min-h-[100vh] scroll-mt-24">
+      <div className="max-w-2xl mx-auto mt-16">
         <h2 className="sec-title">Projects That<br /><span className="text-primary">Shipped.</span></h2>
 
         <div style={{ marginTop: "28px" }}>

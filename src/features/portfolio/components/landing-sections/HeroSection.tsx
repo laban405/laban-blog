@@ -2,8 +2,9 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { AnimatedButton } from "../../../../components/animated-button";
-import GithubIcon from "../../../../components/icons/github";
-import LinkedInIcon from "../../../../components/icons/linkedin";
+
+import Image from "next/image";
+import { StatsSection } from "./Stats";
 
 const easeOutExpo = [0.16, 1, 0.3, 1] as const;
 
@@ -41,90 +42,46 @@ export function HeroSection() {
 
   return (
     <motion.section
-      className="container min-h-[calc(100vh-77px)] justify-center pt-0 flex flex-col pb-8"
+      className="min-h-[calc(100vh-77px)] justify-center pt-0 flex flex-col pb-8 items-center mb-8 mx-3 sm:mx-0"
       {...container}
     >
-      <motion.h1
-        className="text-[clamp(48px,7vw,72px)] max-w-[900px] tracking-[-0.045em]"
-        {...fadeUp}
-      >
-        Senior Frontend Engineer &amp;
-        <br />
-        AI Integration Specialist
-      </motion.h1>
-
-      <motion.div
-        className="grid min-h-[100px] mt-[38px] gap-[30px] grid-cols-[220px_1fr] max-[980px]:grid-cols-1"
-        {...fadeUp}
-      >
-        <motion.div
-          className="border-r border-r-zinc-500 flex flex-col justify-center max-[980px]:border-r-0"
-          whileHover={
-            prefersReducedMotion ? undefined : { x: 2, transition: { duration: 0.2 } }
-          }
-        >
-          <div className="mb-4 text-[46px] font-bold tracking-[-0.03em]">#10+</div>
-          <p className="text-[11px] uppercase tracking-[0.12em] text-zinc-500">
-            Completed Projects
-          </p>
-        </motion.div>
-
-        <div className="min-h-[100px] flex flex-col justify-center">
-          <p className="text-sm leading-[1.8]">
-            <span className="font-semibold">I&apos;m Laban Mogire</span>, a Senior Frontend
-            Engineer who specializes in frontend systems that stay clean as products scale, and
-            increasingly, systems that use AI to do more for the people who use them.
-          </p>
+      <div className="flex gap-6 mx-auto sm:flex-row flex-col">
+        <div className="h-36 w-36 rounded-full bg-primary relative overflow-hidden shrink-0">
+          <Image src="/assets/laban_casual.png" alt="Laban Portrait" fill className="h-36 w-36 object-cover"/>
         </div>
-      </motion.div>
-
-      <motion.div
-        className="mt-24 flex justify-between items-center gap-4 flex-wrap"
-        {...fadeUp}
-      >
-        <a href="#contact">
-          <AnimatedButton className="border-primary text-primary bg-transparent">
-            Let&apos;s Work Together →
-          </AnimatedButton>
-        </a>
-
-        <div className="flex gap-[18px] text-[14px] uppercase tracking-[0.12em]">
-          <motion.a
-            href="https://github.com/laban405"
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-2 items-center text-zinc-500 hover:underline hover:text-primary"
-            whileHover={
-              prefersReducedMotion
-                ? undefined
-                : {
-                    y: -2,
-                    transition: { duration: 0.2, ease: easeOutExpo },
-                  }
-            }
+        <div>
+          <motion.p
+            className="text-sm max-w-[900px] tracking-[-0.045em]"
+            {...fadeUp}
           >
-            <GithubIcon className="h-6 w-6" />
-            <span>Github</span>
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/laban405/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-2 items-center text-zinc-500 hover:underline hover:text-primary"
-            whileHover={
-              prefersReducedMotion
-                ? undefined
-                : {
-                    y: -2,
-                    transition: { duration: 0.2, ease: easeOutExpo },
-                  }
-            }
+            Senior Frontend Engineer
+          </motion.p>
+          <motion.h1
+            className="text-[clamp(48px,7vw,72px)] max-w-[900px] tracking-[-0.045em]"
+            {...fadeUp}
           >
-            <LinkedInIcon className="h-7 w-7" />
-            <span>LinkedIn</span>
-          </motion.a>
+            Laban <span className="text-primary">Mogire</span>
+          </motion.h1>
+          <div className="">
+            <p className="text-sm leading-[1.8] max-w-md">
+              I build AI-enabled frontend systems that{" "}
+              <span className="font-bold italic">scale</span>, driving faster
+              delivery, better user experiences, and{" "}
+              <span className="font-bold italic">smarter</span> product
+              behavior.
+            </p>
+          </div>
+          <motion.div className="mt-6 flex gap-4 flex-col" {...fadeUp}>
+            <a href="#contact">
+              <AnimatedButton className="border-primary text-primary bg-transparent">
+                Let&apos;s Work Together →
+              </AnimatedButton>
+            </a>
+            <StatsSection/>
+       
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

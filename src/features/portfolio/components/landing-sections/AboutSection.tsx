@@ -2,60 +2,52 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section">
-      <div className="container about-wrap">
-        <div>
-        <p className="uppercase text-zinc-500 text-sm">toptal vetted</p>
-
-          <h2 className="sec-title mb-4">About <span className="text-primary">Me</span></h2>
-          {/* <p className="mb-2">
-            I&apos;m a Senior Frontend Engineer based in Nairobi, Kenya,
-            specializing in scalable frontend systems and AI-powered product
-            experiences.{" "}
-          </p> */}
+    <section id="about" className="mx-4 md:mx-0 pt-4 scroll-mt-0 sm:min-h-[100vh] flex flex-col justify-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="sec-title mb-4">
+            About <span className="text-primary">Me.</span>
+          </h2>
+          <div className="flex gap-3 sm:gap-4">
+            <div>
+              <div className="relative w-32 h-32 rounded-full overflow-hidden shrink-0">
+                <Image
+                  src="/assets/laban_suit.png"
+                  alt="Laban Portrait"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+                <p className=" text-zinc-500 text-sm text-center m-2">Toptal Vetted</p>
+            </div>
+            <p className="text-sm leading-[1.8] sm:mt-6">
+              I&rsquo;m Laban Mogire, a Senior Frontend Engineer based in
+              Nairobi with 6+ years of experience building scalable web and
+              mobile systems across fintech, SaaS, IoT, and enterprise products.
+            </p>
+          </div>
           <p className="mb-2 text-sm leading-[1.8]">
-            Over 6+ years I&apos;ve shipped across fintech, IoT, transport and
-            enterprise, stepping into complex codebases and rebuilding them into
-            clean, maintainable foundations that teams can actually grow with.
+            I&rsquo;ve worked with teams and clients across Germany, Hong Kong,
+            and Africa, delivering systems in both startup and enterprise
+            environments.
           </p>
-          <p className="text-sm leading-[1.8]">
-            Now I bring that same architectural discipline to AI integration,
-            connecting products to LLMs, building agentic workflows, and
-            creating conversational UIs using the Anthropic Claude API, Vercel
-            AI SDK, and LangChain.js, on top of the React, Next.js, and Angular
-            stack I&apos;ve been mastering for years.
+          <p className="mb-2 text-sm leading-[1.8]">
+            My speciality lies in building scalable frontend architectures using
+            React, Next.js, and Angular. Over the years, I&rsquo;ve led
+            migrations from monoliths to microfrontends, built design systems,
+            and improved performance and developer velocity in production
+            systems at scale.
+          </p>
+          <p className="mb-2 text-sm leading-[1.8]">
+            Currently, I work as a Senior Frontend Engineer at Kamsware, where I
+            build enterprise platforms, identity systems, and IoT-enabled
+            applications.
+          </p>
+          <p className="mb-2 text-sm leading-[1.8]">
+            I&rsquo;ve recently also been exploring how to integrate AI into
+            frontend systems to build smarter interfaces and tools.
           </p>
         </div>
-        <div className="portrait-block">
-          <Image
-            src="/assets/picofme.webp"
-            alt="Laban Portrait"
-            width={430}
-            height={430}
-          />
-        </div>
-        <div className="stats-col">
-          <div>
-            <div className="n">5+</div>
-            <div className="uppercase text-zinc-500 text-xs mt-2">Industries Served</div>
-          </div>
-          <div>
-            <div className="n">6+</div>
-            <div className="uppercase text-zinc-500 text-xs mt-2">Years Building</div>
-          </div>
-          <div>
-            <div className="n">10+</div>
-            <div className="uppercase text-zinc-500 text-xs mt-2">Project Collaborations</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p className="italic text-center mt-8">The goal is always the same</p>
-        <p className="italic text-center mb-8">
-          Architecture invisible to users, frictionless for builders. The
-          difference now is it can also think.
-        </p>
-      </div>
+      
     </section>
   );
 }

@@ -9,13 +9,12 @@ import { ProjectsSection } from "./components/landing-sections/ProjectsSection";
 import { CtaSection } from "./components/landing-sections/CtaSection";
 import { CareerSection } from "./components/landing-sections/CareerSection";
 import { TestimonialsSection } from "./components/landing-sections/TestimonialsSection";
-import { UpdatesSection } from "./components/landing-sections/UpdatesSection";
 import { ContactSection } from "./components/landing-sections/ContactSection";
 import { FooterSection } from "./components/landing-sections/FooterSection";
 
 export default function PortfolioFeature() {
   return (
-    <main>
+    <main className="">
       <HeaderSection />
       <HeroSection />
       <AboutSection />
