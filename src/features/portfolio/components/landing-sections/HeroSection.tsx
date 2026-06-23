@@ -47,7 +47,7 @@ export function HeroSection() {
     >
       <div className="flex gap-6 mx-auto sm:flex-row flex-col">
         <div className="h-36 w-36 rounded-full bg-primary relative overflow-hidden shrink-0">
-          <Image src="/assets/laban_casual.png" alt="Laban Portrait" fill className="h-36 w-36 object-cover"/>
+          <Image src="/assets/laban_casual.png" alt="Laban Mogire, Senior Frontend Engineer" fill className="h-36 w-36 object-cover"/>
         </div>
         <div>
           <motion.p
@@ -61,6 +61,7 @@ export function HeroSection() {
             {...fadeUp}
           >
             Laban <span className="text-primary">Mogire</span>
+            <span className="sr-only">, Senior Frontend Engineer</span>
           </motion.h1>
           <div className="">
             <p className="text-sm leading-[1.8] max-w-md">

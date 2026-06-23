@@ -12,7 +12,7 @@ export function AboutSection() {
               <div className="relative w-32 h-32 rounded-full overflow-hidden shrink-0">
                 <Image
                   src="/assets/laban_suit.png"
-                  alt="Laban Portrait"
+                  alt="Laban Mogire, Senior Frontend Engineer based in Nairobi"
                   fill
                   className="object-cover"
                 />

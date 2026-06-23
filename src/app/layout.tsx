@@ -1,8 +1,66 @@
 import React from "react";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { cn } from "../lib/utils";
 import { ThemeProvider } from "../providers/theme-provider";
 import "../styles/globals.css";
+
+const SITE_URL = "https://laban.mikrosell.com";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Laban Mogire | Senior Frontend Engineer — React, Next.js & Angular",
+    template: "%s | Laban Mogire",
+  },
+  description:
+    "Senior Frontend Engineer with 6+ years building scalable web and mobile systems in React, Next.js, Angular, and AI-integrated UIs across fintech, SaaS, IoT, and enterprise.",
+  keywords: [
+    "Senior Frontend Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "Angular Developer",
+    "Frontend Engineer Nairobi",
+    "Laban Mogire",
+    "AI Frontend Engineer",
+    "IoT Frontend",
+    "Micro-frontend",
+  ],
+  authors: [{ name: "Laban Mogire", url: SITE_URL }],
+  creator: "Laban Mogire",
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Laban Mogire",
+    title: "Laban Mogire | Senior Frontend Engineer",
+    description:
+      "Senior Frontend Engineer with 6+ years building scalable web and mobile systems in React, Next.js, Angular, and AI-integrated UIs.",
+    images: [
+      {
+        url: "/assets/laban_clean.jpg",
+        width: 1247,
+        height: 1280,
+        alt: "Laban Mogire — Senior Frontend Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Laban Mogire | Senior Frontend Engineer",
+    description:
+      "Senior Frontend Engineer with 6+ years building scalable web and mobile systems in React, Next.js, Angular, and AI-integrated UIs.",
+    images: ["/assets/laban_clean.jpg"],
+    creator: "@laban_mogire",
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
 
 (global as any).performance = global.performance || {
   now: () => new Date().getTime(),
