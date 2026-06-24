@@ -9,12 +9,13 @@ export function AboutSection() {
           </h2>
           <div className="flex gap-3 sm:gap-4">
             <div>
-              <div className="relative w-32 h-32 rounded-full overflow-hidden shrink-0">
+              <div className="w-32 h-32 rounded-full overflow-hidden shrink-0">
                 <Image
                   src="/assets/laban_suit.webp"
-                  alt="Laban Mogire, Senior Frontend Engineer based in Nairobi"
-                  fill
-                  className="object-cover"
+                  alt="Laban Mogire, Frontend Engineer & AI Specialist based in Nairobi"
+                  width={128}
+                  height={128}
+                  className="h-full w-full object-cover"
                 />
               </div>
                 <p className=" text-zinc-500 text-sm text-center m-2">Toptal Vetted</p>

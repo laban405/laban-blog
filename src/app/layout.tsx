@@ -69,10 +69,10 @@ export const metadata: Metadata = {
 
 const mozillaText = localFont({
   src: [
-    { path: "../../public/fonts/mozilla/mozilla-text-400.ttf", weight: "400", style: "normal" },
-    { path: "../../public/fonts/mozilla/mozilla-text-500.ttf", weight: "500", style: "normal" },
-    { path: "../../public/fonts/mozilla/mozilla-text-600.ttf", weight: "600", style: "normal" },
-    { path: "../../public/fonts/mozilla/mozilla-text-700.ttf", weight: "700", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-400.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-500.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-600.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/mozilla/mozilla-text-700.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-stack-sans-text",
   display: "swap",
@@ -80,10 +80,10 @@ const mozillaText = localFont({
 
 const stackSansNotch = localFont({
   src: [
-    { path: "../../public/fonts/stack/stack-sans-notch-400.ttf", weight: "400", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-notch-500.ttf", weight: "500", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-notch-600.ttf", weight: "600", style: "normal" },
-    { path: "../../public/fonts/stack/stack-sans-notch-700.ttf", weight: "700", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-400.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-500.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-600.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/stack/stack-sans-notch-700.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-stack-sans-notch",
   display: "swap",
