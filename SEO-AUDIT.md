@@ -1,6 +1,6 @@
 # SEO Audit — laban.mikrosell.com
 
-**Last updated:** 2026-06-24  
+**Last updated:** 2026-06-25  
 **Stack:** Next.js 13.4 · App Router · TypeScript · Tailwind
 
 ---
@@ -9,39 +9,41 @@
 
 | Item | Status |
 |---|---|
-| Title tag | ✅ Updated |
-| Meta description | ✅ Updated |
-| Keywords | ✅ Updated |
-| Open Graph tags | ✅ Updated |
-| Twitter card | ✅ Updated |
+| Title tag | ✅ Done |
+| Meta description | ✅ Done |
+| Keywords | ✅ Done |
+| Open Graph tags | ✅ Done |
+| Twitter card | ✅ Done |
 | Canonical URL | ✅ Done |
 | JSON-LD structured data | ✅ Done |
 | Hero image `priority` prop | ✅ Done |
+| Hero image responsive sizing (`width`/`height`) | ✅ Done |
 | Hero + About + Footer images → WebP | ✅ Done |
+| Unused PNG originals deleted | ✅ Done |
 | Stats heading tags `<h2>` → `<p>` | ✅ Done |
 | Header logo `<h3>` → `<p>` | ✅ Done |
 | Section IDs (Career, Testimonials) | ✅ Done |
-| sitemap.xml | ✅ Auto-generated |
-| robots.txt | ✅ Auto-generated |
-| OG image dimensions (1200×630) | ❌ Still portrait — design work needed |
-| Google Search Console | ✅ Done |
-| Unused heavy assets deleted | 🔲 Pending |
+| sitemap.xml | ✅ Done |
+| robots.txt | ✅ Done |
+| Google Search Console verified + sitemap submitted | ✅ Done |
 | Font subsetting + woff2 conversion | ✅ Done |
+| Unused font files deleted | ✅ Done |
+| OG image dimensions (1200×630) | ❌ Pending — design work |
 
 ---
 
-## ❌ Remaining Issues
+## ❌ One Remaining Issue
 
-### 1. OG Image is Portrait (1247×1280)
+### OG Image is Portrait (1247×1280)
 
 **File:** `src/app/layout.tsx` — `openGraph.images` and `twitter.images`  
 **Current image:** `/assets/laban_clean.jpg` — portrait orientation  
-**Impact:** LinkedIn, WhatsApp, Facebook, and Slack all crop to landscape (1200×630). This produces a heavily cropped thumbnail that looks unintentional.
+**Impact:** LinkedIn, WhatsApp, Facebook, and Slack crop share previews to landscape (1200×630). The current portrait image produces a heavily cropped thumbnail.
 
 **Fix:**
-1. Design a 1200×630 banner in Canva or Figma — name + "Frontend Engineer · AI Specialist" + tech stack pills, emerald/cream palette
+1. Design a 1200×630 banner in Canva — name + "Frontend Engineer · AI Specialist" + tech stack pills, emerald/cream palette
 2. Save as `/public/assets/og-banner.jpg`
-3. Update `src/app/layout.tsx`:
+3. Update `src/app/layout.tsx` (Claude Code can do this once you have the file):
 ```ts
 openGraph: {
   images: [{ url: "/assets/og-banner.jpg", width: 1200, height: 630, alt: "Laban Mogire — Frontend Engineer & AI Specialist" }],
@@ -53,72 +55,34 @@ twitter: {
 
 ---
 
-### 2. Google Search Console Not Verified
-
-**Impact:** Google has no confirmed owner for the domain. No index coverage alerts, no manual action notifications, no Core Web Vitals data.
-
-**Steps:**
-1. Go to [search.google.com/search-console](https://search.google.com/search-console)
-2. Add property: `https://laban.mikrosell.com`
-3. Choose **HTML tag** verification — copy the `content` value
-4. Add to `src/app/layout.tsx` inside `metadata`:
-```ts
-verification: {
-  google: "paste-your-content-value-here",
-},
-```
-5. Deploy, then click **Verify** in GSC
-6. Submit sitemap: `https://laban.mikrosell.com/sitemap.xml`
-
----
-
-### 3. Unused Heavy Assets Still in `/public`
-
-**Files:**
-- `public/assets/laban_potrait.png` — ~1.5 MB, not referenced anywhere
-- `public/assets/picofme.png` — ~747 KB, not referenced (WebP version `picofme.webp` at 18 KB already exists)
-- `public/fonts/stack/stack-sans-text-{400,500,600,700}.ttf` — 4 TTF files, not loaded by `layout.tsx` (the `--font-stack-sans-text` variable is served by `mozilla-text-*.woff2`)
-
-**Impact:** These inflate the Docker image and add deploy time. No SEO impact but worth cleaning up.
-
-**Fix:** Delete all listed files.
-
----
-
-
 ## ✅ Resolved Items
 
 | Item | Detail |
 |---|---|
 | Title tag | `Laban Mogire \| AI-Native Frontend Engineer — React, Next.js & Angular` |
 | Meta description | Frontend + AI specialist framing, 6+ years experience |
-| Keywords | Updated: "AI Frontend Engineer", "LLM UI Engineer", "Frontend AI Specialist", etc. |
-| OG / Twitter titles | Updated to "AI-Native Frontend Engineer" |
+| Keywords | "AI Frontend Engineer", "LLM UI Engineer", "Frontend AI Specialist", etc. |
+| OG / Twitter titles | "AI-Native Frontend Engineer" |
 | JSON-LD `jobTitle` | `"Frontend Engineer & AI Integration Specialist"` |
-| JSON-LD `knowsAbout` | Expanded: Claude API, LLM Applications, Flutter, Node.js, Full-Stack |
+| JSON-LD `knowsAbout` | Claude API, LLM Applications, Flutter, Node.js, Full-Stack |
 | Canonical URL | `https://laban.mikrosell.com` |
-| Hero image `priority` | Added — Next.js now preloads the LCP image |
+| Hero image `priority` | Added — Next.js preloads the LCP image |
+| Hero image sizing | `fill` → `width={144} height={144}` — Next.js now serves correct size |
+| About image sizing | `fill` → `width={128} height={128}` — correct size served |
 | Hero image WebP | `laban_casual.png` (2.3 MB) → `laban_casual.webp` (94 KB) — 97% smaller |
 | About image WebP | `laban_suit.png` (2.3 MB) → `laban_suit.webp` (90 KB) — 97% smaller |
-| Footer image WebP | Also converted and updated |
-| Stats `<h2>` → `<p>` | `Stats.tsx` — all three stat numbers now use `<p className="stat-big">` |
-| Header logo `<h3>` → `<p>` | `HeaderSection.tsx` — logo element now uses `<p>` |
+| Footer image WebP | Converted and updated |
+| Unused PNG originals | `laban_casual.png` + `laban_suit.png` deleted — ~4.6 MB removed |
+| Stats `<h2>` → `<p>` | All three stat numbers use `<p className="stat-big">` |
+| Header logo `<h3>` → `<p>` | Logo element uses `<p>` |
 | Section IDs | `id="career"` and `id="testimonials"` added |
-| `sitemap.xml` | Auto-generated via `src/app/sitemap.ts` |
+| `sitemap.xml` | Auto-generated + submitted to GSC |
 | `robots.txt` | Auto-generated with sitemap reference |
+| Google Search Console | Property verified, sitemap submitted |
+| Font subsetting | 8 fonts subsetted to Latin + punctuation, converted to woff2 |
+| Font size | ~66 KB/font TTF → 16 KB/font woff2 — total ~528 KB → ~128 KB |
+| Unused font files | 12 TTF files deleted (~780 KB removed from Docker image) |
 | `lang="en"` | Present on `<html>` |
 | `metadataBase` | Set — relative image URLs resolve correctly |
 | `h1` | Renders correctly via `motion.h1` |
-| Alt text | All three portrait images have descriptive alt text |
-
----
-
-## Prioritised Remaining Actions
-
-| Priority | Action | Effort |
-|---|---|---|
-| 1 | Submit to Google Search Console | 10 min |
-| 2 | Create 1200×630 OG banner image | 30–60 min (design) |
-| 3 | Update `og-banner.jpg` references in `layout.tsx` | 5 min |
-| 4 | Delete unused assets (`laban_potrait.png`, `picofme.png`) | 2 min |
-| 5 | Font subsetting | 30 min |
+| Alt text | All portrait images updated to "Frontend Engineer & AI Specialist" framing |

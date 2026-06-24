@@ -18,19 +18,17 @@
 
 - [ ] **OG banner 1200×630** — Current OG image is portrait (1247×1280) and gets cropped on LinkedIn/WhatsApp/Slack. Design a landscape banner in Canva (name + "Frontend Engineer · AI Specialist" + tech stack, emerald palette). Save as `/public/assets/og-banner.jpg`. Update `openGraph.images` and `twitter.images` in `src/app/layout.tsx`.
 
-- [ ] **Delete unused assets** — not referenced anywhere, just bloat in Docker image:
-  - `public/assets/laban_potrait.png` (~1.5 MB)
-  - `public/assets/picofme.png` (~747 KB) — WebP version already exists
+- [x] **Delete unused assets** — `laban_casual.png` and `laban_suit.png` deleted (superseded by WebP). ~4.6 MB removed from Docker image.
 
 - [x] **Font subsetting + woff2 conversion** — all 8 active fonts subsetted to Latin + punctuation and converted to woff2. Size per file: ~66 KB → 16 KB (75% smaller). `layout.tsx` updated to load `.woff2` files. Total font payload: ~528 KB → ~128 KB.
 
-- [ ] **Delete unused font files** — `public/fonts/stack/stack-sans-text-{400,500,600,700}.ttf` are not loaded by `layout.tsx` (they're dead weight in the Docker image).
+- [x] **Delete unused font files** — 4 unreferenced `stack-sans-text-*.ttf` + 8 superseded `*.ttf` files deleted. ~780 KB removed from Docker image.
 
 ---
 
 ## Portfolio Content
 
-- [ ] **Add 3 detailed case studies** — NTSA transport system, KamsGuard IoT portal, Kyosk micro-frontend migration. Each needs: problem, your role, stack, measurable outcome. Use real numbers from CV.
+- [x] **Add 3 detailed case studies** — KamsGuard IoT (96% efficiency, 5,000+ devices), Kyosk micro-frontend migration (50% velocity, 3× delivery), NTSA transport system (500K+ vehicles). Each shows problem, outcome, metrics, and stack.
 - [ ] **Add cal.com / Calendly booking link to CTA** — the "Let's Work Together →" button currently links to `#contact`. Consider pointing it directly to a booking link.
 - [ ] **Hero copy** — confirm final wording. Currently reads: *"I build AI-enabled systems that scale, driving faster delivery, better user experiences, and smarter product behavior."* Consider updating to reflect the AI + frontend positioning more sharply.
 
