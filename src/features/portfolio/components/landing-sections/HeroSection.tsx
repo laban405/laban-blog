@@ -54,21 +54,22 @@ export function HeroSection() {
             className="text-sm max-w-[900px] tracking-[-0.045em]"
             {...fadeUp}
           >
-            Full-Stack Engineer · AI-Native
+            Frontend Engineer · AI Specialist
           </motion.p>
           <motion.h1
             className="text-[clamp(48px,7vw,72px)] max-w-[900px] tracking-[-0.045em]"
             {...fadeUp}
           >
             Laban <span className="text-primary">Mogire</span>
-            <span className="sr-only">, Full-Stack Software Engineer</span>
+            <span className="sr-only">, Frontend Engineer & AI Specialist</span>
           </motion.h1>
           <div className="">
             <p className="text-sm leading-[1.8] max-w-md">
-              I build end-to-end products — web, mobile, and AI-powered systems
-              that <span className="font-bold italic">ship fast</span>, scale
-              cleanly, and create{" "}
-              <span className="font-bold italic">real business value</span>.
+              I build AI-enabled  systems that{" "}
+              <span className="font-bold italic">scale</span>, driving faster
+              delivery, better user experiences, and{" "}
+              <span className="font-bold italic">smarter</span> product
+              behavior.
             </p>
           </div>
           <motion.div className="mt-6 flex gap-4 flex-col" {...fadeUp}>

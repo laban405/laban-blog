@@ -8,8 +8,8 @@ export const services = [
   {
     id: "02",
     icon: "⬡",
-    title: "Full-Stack Web Development",
-    desc: "End-to-end delivery in React, Next.js, Angular, and Node.js — from database schema to deployed UI, built to scale and maintained with confidence.",
+    title: "Frontend Engineering",
+    desc: "Production-grade interfaces in React, Next.js, and Angular — with enough backend knowledge to own API contracts, data models, and deployment without handing off.",
   },
   {
     id: "03",
@@ -52,12 +52,12 @@ export const services = [
 export const skillCategories = [
   {
     icon: "✦",
-    title: "AI & Backend",
-    items: ["Claude API", "OpenAI", "LangChain", "RAG", "Node.js", "REST APIs", "GraphQL", "NoSQL"],
+    title: "AI Integration",
+    items: ["Claude API", "OpenAI", "LangChain", "RAG", "Streaming UIs", "AI Agents", "Prompt Engineering"],
   },
   {
     icon: "⬡",
-    title: "Web & Mobile",
+    title: "Frontend & Mobile",
     items: ["React", "Next.js", "Angular", "React Native", "Flutter", "Ionic", "Capacitor"],
   },
   {
