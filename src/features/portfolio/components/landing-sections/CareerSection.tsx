@@ -3,7 +3,7 @@ import { careerItems } from "../../data";
 
 export function CareerSection() {
   return (
-    <section className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
+    <section id="career" className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
       <div className="max-w-2xl mx-auto mt-16">
         <div>
           <h2 className="sec-title">

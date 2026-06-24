@@ -6,9 +6,9 @@ export function HeaderSection() {
     <header className="sticky top-0 z-[60] bg-[color-mix(in_srgb,hsl(var(--background))_88%,hsl(var(--secondary))_12%)] backdrop-blur-[8px]">
       <div className="container flex min-h-[76px] items-center justify-between gap-4 max-[980px]:min-h-[68px] max-[980px]:gap-3">
         <div>
-          <h3 className="text-[1.5rem] tracking-[-0.03em] max-[980px]:text-[1.2rem]">
+          <p className="text-[1.5rem] font-semibold tracking-[-0.03em] max-[980px]:text-[1.2rem]">
             L<span className="text-primary">M.</span>
-          </h3>
+          </p>
           <span className="flex h-full items-center justify-between text-[10px] text-[hsl(var(--muted-foreground))] max-[980px]:text-[9px]">
             Trusted by worldwide teams
           </span>

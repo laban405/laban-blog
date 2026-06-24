@@ -47,7 +47,7 @@ export function HeroSection() {
     >
       <div className="flex gap-6 mx-auto sm:flex-row flex-col">
         <div className="h-36 w-36 rounded-full bg-primary relative overflow-hidden shrink-0">
-          <Image src="/assets/laban_casual.png" alt="Laban Mogire, Senior Frontend Engineer" fill className="h-36 w-36 object-cover"/>
+          <Image src="/assets/laban_casual.webp" alt="Laban Mogire, Senior Frontend Engineer" fill priority className="h-36 w-36 object-cover"/>
         </div>
         <div>
           <motion.p

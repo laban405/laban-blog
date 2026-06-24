@@ -33,7 +33,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
+    <section id="testimonials" className="mx-4 sm:mx-0 pt-4 scroll-mt-24">
       <div className="max-w-2xl mx-auto mt-16">
         <div className="testimonial-head">
           <div>
