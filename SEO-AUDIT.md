@@ -24,9 +24,9 @@
 | sitemap.xml | ✅ Auto-generated |
 | robots.txt | ✅ Auto-generated |
 | OG image dimensions (1200×630) | ❌ Still portrait — design work needed |
-| Google Search Console | 🔲 Pending manual action |
+| Google Search Console | ✅ Done |
 | Unused heavy assets deleted | 🔲 Pending |
-| Font subsetting | ⚪ Low priority |
+| Font subsetting + woff2 conversion | ✅ Done |
 
 ---
 
@@ -77,22 +77,14 @@ verification: {
 **Files:**
 - `public/assets/laban_potrait.png` — ~1.5 MB, not referenced anywhere
 - `public/assets/picofme.png` — ~747 KB, not referenced (WebP version `picofme.webp` at 18 KB already exists)
+- `public/fonts/stack/stack-sans-text-{400,500,600,700}.ttf` — 4 TTF files, not loaded by `layout.tsx` (the `--font-stack-sans-text` variable is served by `mozilla-text-*.woff2`)
 
 **Impact:** These inflate the Docker image and add deploy time. No SEO impact but worth cleaning up.
 
-**Fix:** Delete both files.
+**Fix:** Delete all listed files.
 
 ---
 
-## ⚪ Low Priority
-
-### 4. Font Subsetting
-
-**Location:** `public/fonts/` — 8 TTF files, ~500 KB total  
-**Impact:** `display: swap` is already set so text shows immediately, but 500 KB of fonts is still a load cost on slow mobile connections.  
-**Fix (optional):** Subset with `pyftsubset` (fonttools) or glyphhanger. Can reduce each file 60–80%. Not urgent.
-
----
 
 ## ✅ Resolved Items
 

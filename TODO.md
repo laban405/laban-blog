@@ -14,11 +14,7 @@
 
 ### ⏳ Pending
 
-- [ ] **Google Search Console** — Go to [search.google.com/search-console](https://search.google.com/search-console), add `https://laban.mikrosell.com`, choose HTML tag verification, paste the `content` value into `src/app/layout.tsx`:
-  ```ts
-  verification: { google: "paste-value-here" }
-  ```
-  Deploy → verify → submit sitemap `https://laban.mikrosell.com/sitemap.xml`.
+- [x] **Google Search Console** — property verified, sitemap `https://laban.mikrosell.com/sitemap.xml` submitted.
 
 - [ ] **OG banner 1200×630** — Current OG image is portrait (1247×1280) and gets cropped on LinkedIn/WhatsApp/Slack. Design a landscape banner in Canva (name + "Frontend Engineer · AI Specialist" + tech stack, emerald palette). Save as `/public/assets/og-banner.jpg`. Update `openGraph.images` and `twitter.images` in `src/app/layout.tsx`.
 
@@ -26,7 +22,9 @@
   - `public/assets/laban_potrait.png` (~1.5 MB)
   - `public/assets/picofme.png` (~747 KB) — WebP version already exists
 
-- [ ] **Font subsetting** *(low priority)* — 8 TTF files ~500 KB total. Use `pyftsubset` or glyphhanger to subset to Latin + punctuation. `display: swap` already set so this is not urgent.
+- [x] **Font subsetting + woff2 conversion** — all 8 active fonts subsetted to Latin + punctuation and converted to woff2. Size per file: ~66 KB → 16 KB (75% smaller). `layout.tsx` updated to load `.woff2` files. Total font payload: ~528 KB → ~128 KB.
+
+- [ ] **Delete unused font files** — `public/fonts/stack/stack-sans-text-{400,500,600,700}.ttf` are not loaded by `layout.tsx` (they're dead weight in the Docker image).
 
 ---
 
