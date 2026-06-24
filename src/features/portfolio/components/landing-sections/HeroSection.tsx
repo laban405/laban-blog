@@ -47,29 +47,28 @@ export function HeroSection() {
     >
       <div className="flex gap-6 mx-auto sm:flex-row flex-col">
         <div className="h-36 w-36 rounded-full bg-primary relative overflow-hidden shrink-0">
-          <Image src="/assets/laban_casual.webp" alt="Laban Mogire, Senior Frontend Engineer" fill priority className="h-36 w-36 object-cover"/>
+          <Image src="/assets/laban_casual.webp" alt="Laban Mogire, Full-Stack Software Engineer" fill priority className="h-36 w-36 object-cover"/>
         </div>
         <div>
           <motion.p
             className="text-sm max-w-[900px] tracking-[-0.045em]"
             {...fadeUp}
           >
-            Senior Frontend Engineer
+            Full-Stack Engineer · AI-Native
           </motion.p>
           <motion.h1
             className="text-[clamp(48px,7vw,72px)] max-w-[900px] tracking-[-0.045em]"
             {...fadeUp}
           >
             Laban <span className="text-primary">Mogire</span>
-            <span className="sr-only">, Senior Frontend Engineer</span>
+            <span className="sr-only">, Full-Stack Software Engineer</span>
           </motion.h1>
           <div className="">
             <p className="text-sm leading-[1.8] max-w-md">
-              I build AI-enabled frontend systems that{" "}
-              <span className="font-bold italic">scale</span>, driving faster
-              delivery, better user experiences, and{" "}
-              <span className="font-bold italic">smarter</span> product
-              behavior.
+              I build end-to-end products — web, mobile, and AI-powered systems
+              that <span className="font-bold italic">ship fast</span>, scale
+              cleanly, and create{" "}
+              <span className="font-bold italic">real business value</span>.
             </p>
           </div>
           <motion.div className="mt-6 flex gap-4 flex-col" {...fadeUp}>

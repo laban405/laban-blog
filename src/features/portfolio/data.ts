@@ -1,64 +1,69 @@
 export const services = [
   {
     id: "01",
-    icon: "⬡",
-    title: "Frontend Development",
-    desc: "Scalable, maintainable implementations in Angular, React, or Next.js — built to last, not just to ship.",
+    icon: "✦",
+    title: "AI Integration & Agentic Systems",
+    desc: "I connect your product to Claude, GPT-4o, and beyond — streaming chat, AI copilots, RAG pipelines, and agentic workflows that feel native, not bolted on.",
   },
   {
     id: "02",
-    icon: "✦",
-    title: "AI Integration & LLM-Powered UIs",
-    desc: "I connect your product to Claude, GPT-4o, and beyond — streaming chat, AI copilots, intelligent search, and agentic workflows that feel native, not bolted on.",
+    icon: "⬡",
+    title: "Full-Stack Web Development",
+    desc: "End-to-end delivery in React, Next.js, Angular, and Node.js — from database schema to deployed UI, built to scale and maintained with confidence.",
   },
   {
     id: "03",
-    icon: "↑",
-    title: "Frontend Modernization",
-    desc: "Legacy codebase? I migrate monoliths to micro-frontends, roll out design systems, and rebuild architectures your team will actually enjoy working in.",
+    icon: "◻",
+    title: "Mobile App Engineering",
+    desc: "Cross-platform iOS and Android apps with consistent performance and clean UI using React Native, Flutter, and Ionic/Capacitor.",
   },
   {
     id: "04",
+    icon: "↑",
+    title: "System Modernization",
+    desc: "Legacy codebase? I migrate monoliths to micro-frontends or modular backends, roll out design systems, and rebuild architectures your team will actually enjoy working in.",
+  },
+  {
+    id: "05",
+    icon: "◉",
+    title: "IoT & Hardware-Connected Systems",
+    desc: "Production-grade hardware communication via WebSerial, WebUSB, BLE, and WiFi — built and deployed at scale across 5,000+ IoT devices.",
+  },
+  {
+    id: "06",
+    icon: "⚡",
+    title: "Performance & Architecture Audit",
+    desc: "Faster loads, tighter APIs, smarter caching — I've cut load times by 50% and API integration effort by 30% in production. Clear written audit + action plan.",
+  },
+  {
+    id: "07",
     icon: "◈",
     title: "UI/UX Engineering",
     desc: "Structured UX audits and accessible, intuitive interfaces — designed to work, not just look good.",
   },
   {
-    id: "05",
-    icon: "⚡",
-    title: "Performance Optimization",
-    desc: "Faster loads, tighter responsiveness, smarter caching — I've cut load times by 50% and API integration effort by 30% in production.",
-  },
-  {
-    id: "06",
-    icon: "◉",
-    title: "IoT & Hardware-Connected UIs",
-    desc: "Production-grade hardware communication via WebSerial, WebUSB, BLE, and WiFi — built and deployed at scale across 5,000+ IoT devices.",
-  },
-  {
-    id: "07",
-    icon: "◻",
-    title: "Mobile App Engineering",
-    desc: "Cross-platform mobile apps with consistent performance and clean UI using React Native, Flutter, and Ionic/Capacitor.",
-  },
-  {
     id: "08",
     icon: "◎",
-    title: "Technical Leadership",
-    desc: "Coding standards, design systems, documentation, and mentorship — I raise the bar for the whole team, not just my own output.",
+    title: "Technical Leadership & Consultation",
+    desc: "Architecture decisions, coding standards, design systems, and mentorship — I raise the bar for the whole team, not just my own output.",
   },
 ];
 
 export const skillCategories = [
   {
+    icon: "✦",
+    title: "AI & Backend",
+    items: ["Claude API", "OpenAI", "LangChain", "RAG", "Node.js", "REST APIs", "GraphQL", "NoSQL"],
+  },
+  {
     icon: "⬡",
-    title: "Frameworks & Libraries",
-    items: ["Angular", "React", "Next.js", "React Native", "Flutter", "Ionic", "Capacitor", "Node.js"],
+    title: "Web & Mobile",
+    items: ["React", "Next.js", "Angular", "React Native", "Flutter", "Ionic", "Capacitor"],
   },
   {
     icon: "◈",
     title: "Languages & State",
-    items: ["TypeScript", "JavaScript ES6+", "Dart", "NgRx", "GraphQL", "REST APIs", "NoSQL"],
+    items: ["TypeScript", "JavaScript ES6+", "Dart", "NgRx", "GraphQL", "SQL"],
   },
   {
     icon: "◉",
