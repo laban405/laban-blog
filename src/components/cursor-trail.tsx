@@ -9,11 +9,9 @@ export function CursorTrail() {
   const mouseX = useMotionValue(-200);
   const mouseY = useMotionValue(-200);
 
-  // Dot follows exactly
   const dotX = useSpring(mouseX, { stiffness: 1000, damping: 50, mass: 0.1 });
   const dotY = useSpring(mouseY, { stiffness: 1000, damping: 50, mass: 0.1 });
 
-  // Ring lags behind — liquid feel
   const ringX = useSpring(mouseX, { stiffness: 120, damping: 16, mass: 0.6 });
   const ringY = useSpring(mouseY, { stiffness: 120, damping: 16, mass: 0.6 });
 
@@ -37,42 +35,47 @@ export function CursorTrail() {
 
   if (!active) return null;
 
-  const shared: React.CSSProperties = {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    pointerEvents: "none",
-    zIndex: 9999,
-    willChange: "transform",
-    translateX: "-50%",
-    translateY: "-50%",
-  };
-
   return (
     <>
+      {/* Trailing ring */}
       <motion.div
         style={{
-          ...shared,
           x: ringX,
           y: ringY,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          marginLeft: "-18px",
+          marginTop: "-18px",
           width: 36,
           height: 36,
           borderRadius: "50%",
-          background: "white",
-          mixBlendMode: "difference",
-          opacity: 0.85,
+          border: "1.5px solid hsl(var(--primary))",
+          background: "transparent",
+          boxShadow: "0 0 0 1px rgba(255,255,255,0.4)",
+          pointerEvents: "none",
+          zIndex: 9999,
+          willChange: "transform",
         }}
       />
+      {/* Exact dot */}
       <motion.div
         style={{
-          ...shared,
           x: dotX,
           y: dotY,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          marginLeft: "-3px",
+          marginTop: "-3px",
           width: 6,
           height: 6,
           borderRadius: "50%",
-          background: "white",
-          mixBlendMode: "difference",
+          background: "hsl(var(--primary))",
+          boxShadow: "0 0 0 1.5px rgba(255,255,255,0.5)",
+          pointerEvents: "none",
+          zIndex: 9999,
+          willChange: "transform",
         }}
       />
     </>
