@@ -27,7 +27,7 @@ If you or someone you know needs:
 → M-Pesa / payment integration done properly
 → A technical advisor who's been in production at scale
 
-DM me or book a free 20-min call: cal.com/laban-mogire
+DM me or book a free 20-min call: cal.com/laban
 
 What are you building right now?
 
@@ -57,7 +57,7 @@ The client can pass any amount in the STK request. Validate it against your orde
 
 I've built Daraja into 5+ production systems. Happy to review your integration.
 
-DM me or book a technical session: cal.com/laban-mogire
+DM me or book a technical session: cal.com/laban
 
 ---
 
@@ -85,7 +85,7 @@ The hardest part wasn't the hardware APIs. It was making it feel simple to the o
 That's the job — not just the code.
 
 Currently available for frontend, AI, and full-stack projects.
-cal.com/laban-mogire
+cal.com/laban
 
 ---
 
@@ -113,7 +113,7 @@ International clients: pricing in USD available.
 All projects: 50% upfront, 50% on delivery. Source code is yours.
 
 3 spots. Book a free 20-min scoping call first:
-cal.com/laban-mogire
+cal.com/laban
 
 ---
 
@@ -140,7 +140,7 @@ What made it production-ready:
 The gap between "AI demo" and "AI feature users trust" is almost entirely in the error states and edge cases. That's where experience matters.
 
 If you want AI built into your product properly — not as a demo, but as a feature:
-cal.com/laban-mogire
+cal.com/laban
 
 ---
 
@@ -159,7 +159,7 @@ I'm growing my independent practice (Mikrosell Systems) and looking for:
 If you refer someone who becomes a client — I'll send you 10% of the project value, cash, no questions asked.
 
 My work: laban.mikrosell.com
-Book a call: cal.com/laban-mogire
+Book a call: cal.com/laban
 
 Tag someone who might need this, or DM me directly.
 
@@ -202,4 +202,4 @@ I'm now available for frontend, AI integration, and full-stack projects.
 
 Kenya + international. Fast delivery. No hand-holding needed.
 
-laban.mikrosell.com | cal.com/laban-mogire
+laban.mikrosell.com | cal.com/laban

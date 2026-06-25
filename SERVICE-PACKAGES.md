@@ -109,6 +109,6 @@ Post these on LinkedIn, add to mikrosell.com, and send as a one-pager to prospec
 
 ## Book a call
 
-**cal.com/laban-mogire** — free 20-min discovery call  
+**cal.com/laban** — free 20-min discovery call  
 **laban405@gmail.com** — direct email  
 **WhatsApp:** +254 797 313 732

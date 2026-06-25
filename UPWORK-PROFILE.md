@@ -124,7 +124,7 @@ Timeline: [X days/weeks]. Rate: $[X]/hr or $[X] fixed.
 I don't do vague estimates. If you reply with more detail, I'll give you a concrete scope within 24 hours.
 
 Portfolio: laban.mikrosell.com  
-Happy to jump on a quick call: cal.com/laban-mogire
+Happy to jump on a quick call: cal.com/laban
 
 Laban
 

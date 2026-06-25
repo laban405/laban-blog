@@ -37,7 +37,7 @@
 - [x] **OG banner brief** — design spec in `OG-BANNER-BRIEF.md`
 
 ### ⏳ Requires manual action (your turn)
-- [ ] **Set up cal.com** — go to cal.com, create free account, username: `laban-mogire`, add two event types: "Free 20-min Discovery Call" and "60-min Technical Consultation ($150)". The booking button on your portfolio already points to `cal.com/laban-mogire`.
+- [ ] **Set up cal.com** — go to cal.com, create free account, username: `laban-mogire`, add two event types: "Free 20-min Discovery Call" and "60-min Technical Consultation ($150)". The booking button on your portfolio already points to `cal.com/laban`.
 - [ ] **Set up Wise account** — wise.com, sign up with your Kenyan ID. For receiving USD/EUR from international clients.
 - [ ] **Set up Wave.com** — wave.com (free), create invoice template with your logo, Mikrosell Systems name, M-Pesa and Wise payment details.
 - [ ] **LinkedIn "Open to freelance"** — LinkedIn → Me → Settings → Job seeking preferences → "Open to work" → Freelance/Contract only → Save.
