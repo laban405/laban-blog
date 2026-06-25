@@ -17,7 +17,7 @@ export function CtaSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-3">
-          <a href="https://cal.com/laban-mogire" target="_blank" rel="noopener noreferrer">
+          <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer">
             <AnimatedButton className="bg-primary border-none text-primary-foreground">
               Book a Free Discovery Call →
             </AnimatedButton>

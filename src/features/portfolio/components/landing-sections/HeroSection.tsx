@@ -73,11 +73,18 @@ export function HeroSection() {
             </p>
           </div>
           <motion.div className="mt-6 flex gap-4 flex-col" {...fadeUp}>
-            <a href="#contact">
-              <AnimatedButton className="border-primary text-primary bg-transparent">
-                Let&apos;s Work Together →
-              </AnimatedButton>
-            </a>
+            <div className="flex gap-3 flex-col w-fit">
+              <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer" className="w-full">
+                <AnimatedButton className="bg-primary border-none text-primary-foreground w-full">
+                  Book a Free Discovery Call →
+                </AnimatedButton>
+              </a>
+              <a href="#contact" className="w-full">
+                <AnimatedButton className="border-primary text-primary bg-transparent w-full">
+                  Let&apos;s Work Together
+                </AnimatedButton>
+              </a>
+            </div>
             <StatsSection/>
        
           </motion.div>
