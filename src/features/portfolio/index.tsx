@@ -11,6 +11,7 @@ import { CareerSection } from "./components/landing-sections/CareerSection";
 import { TestimonialsSection } from "./components/landing-sections/TestimonialsSection";
 import { ContactSection } from "./components/landing-sections/ContactSection";
 import { FooterSection } from "./components/landing-sections/FooterSection";
+import { CursorTrail } from "../../components/cursor-trail";
 
 export default function PortfolioFeature() {
   return (
@@ -27,6 +28,7 @@ export default function PortfolioFeature() {
       {/* <UpdatesSection /> */}
       <ContactSection />
       <FooterSection />
+      <CursorTrail />
     </main>
   );
 }

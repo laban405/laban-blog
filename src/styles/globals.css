@@ -10,8 +10,7 @@ html {
   box-sizing: border-box;
 }
 
-@layer base {
-}
+@layer base {}
 
 /* Animations */
 @keyframes fadeUp {
@@ -105,12 +104,10 @@ html {
 }
 
 body {
-  background: radial-gradient(
-    1200px 600px at 10% 0%,
-    color-mix(in srgb, hsl(var(--background)) 80%, hsl(var(--secondary)) 20%) 0%,
-    hsl(var(--background)) 45%,
-    color-mix(in srgb, hsl(var(--background)) 70%, hsl(var(--muted)) 30%) 100%
-  );
+  background: radial-gradient(1200px 600px at 10% 0%,
+      color-mix(in srgb, hsl(var(--background)) 80%, hsl(var(--secondary)) 20%) 0%,
+      hsl(var(--background)) 45%,
+      color-mix(in srgb, hsl(var(--background)) 70%, hsl(var(--muted)) 30%) 100%);
   color: hsl(var(--foreground));
   font-family: var(--font-stack-sans-text), sans-serif;
 
@@ -185,16 +182,11 @@ a {
 
 .ghost-pill {
   border-radius: 999px;
-  padding: 10px 22px;
+  padding: 3px 10px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
-}
-
-
-
-.ghost-pill {
   border: 1px solid hsl(var(--border));
   color: hsl(var(--foreground));
   background: transparent;
@@ -243,7 +235,7 @@ a {
 
 
 
- .n {
+.n {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -439,7 +431,7 @@ a {
 
 
 
- .hero-line {
+.hero-line {
   font-size: clamp(62px, 8.5vw, 98px);
   letter-spacing: -0.045em;
   margin: 10px 0 24px;

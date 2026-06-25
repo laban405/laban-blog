@@ -53,12 +53,28 @@ export const skillCategories = [
   {
     icon: "✦",
     title: "AI Integration",
-    items: ["Claude API", "OpenAI", "LangChain", "RAG", "Streaming UIs", "AI Agents", "Prompt Engineering"],
+    items: [
+      "Claude API",
+      "OpenAI",
+      "LangChain",
+      "RAG",
+      "Streaming UIs",
+      "AI Agents",
+      "Prompt Engineering",
+    ],
   },
   {
     icon: "⬡",
     title: "Frontend & Mobile",
-    items: ["React", "Next.js", "Angular", "React Native", "Flutter", "Ionic", "Capacitor"],
+    items: [
+      "React",
+      "Next.js",
+      "Angular",
+      "React Native",
+      "Flutter",
+      "Ionic",
+      "Capacitor",
+    ],
   },
   {
     icon: "◈",
@@ -68,22 +84,54 @@ export const skillCategories = [
   {
     icon: "◉",
     title: "UI & Design Systems",
-    items: ["Tailwind CSS", "SASS", "Shadcn", "Material UI", "AntD", "Bootstrap", "Figma"],
+    items: [
+      "Tailwind CSS",
+      "SASS",
+      "Shadcn",
+      "Material UI",
+      "AntD",
+      "Bootstrap",
+      "Figma",
+    ],
   },
   {
     icon: "◫",
     title: "IoT & Hardware APIs",
-    items: ["WebSerial", "WebUSB", "BLE", "WiFi Provisioning", "Device Management", "Real-time Dashboards"],
+    items: [
+      "WebSerial",
+      "WebUSB",
+      "BLE",
+      "WiFi Provisioning",
+      "Device Management",
+      "Real-time Dashboards",
+    ],
   },
   {
     icon: "⊞",
     title: "Architecture",
-    items: ["Micro-frontends", "Single-SPA", "NX Monorepo", "Design Systems", "PWA", "Component Libraries"],
+    items: [
+      "Micro-frontends",
+      "Single-SPA",
+      "NX Monorepo",
+      "Design Systems",
+      "PWA",
+      "Component Libraries",
+    ],
   },
   {
     icon: "⊙",
     title: "DevOps & Tools",
-    items: ["Git", "Docker", "CI/CD", "Webpack", "Jest/Enzyme", "Cypress", "GCP", "AWS", "Vercel"],
+    items: [
+      "Git",
+      "Docker",
+      "CI/CD",
+      "Webpack",
+      "Jest/Enzyme",
+      "Cypress",
+      "GCP",
+      "AWS",
+      "Vercel",
+    ],
   },
 ];
 
@@ -95,10 +143,26 @@ export const projects = [
     period: "Nov 2023 — Present",
     type: "Enterprise · IoT",
     image: "/projects/kamsguard.png",
-    problem: "5,000+ IoT devices across 5 enterprise sites, all configured manually. No unified provisioning tool, no way to run diagnostics at scale.",
-    outcome: "Built a browser-native hardware communication layer using WebSerial, WebUSB, BLE, and WiFi APIs. Provisioning and diagnostics went from manual to automated. Led the portal frontend serving 1,000+ users on real-time device monitoring.",
-    metrics: ["5,000+ devices automated", "96% provisioning efficiency gain", "50% faster load times", "150+ features shipped"],
-    stack: ["Angular", "WebSerial", "WebUSB", "BLE", "NX Monorepo", "CI/CD"],
+    problem:
+      "5,000+ IoT devices across 5 enterprise sites, all configured manually. No unified provisioning tool, no way to run diagnostics at scale.",
+    outcome:
+      "Built a browser-native hardware communication layer using WebSerial, WebUSB, BLE, and WiFi APIs. Provisioning and diagnostics went from manual to automated. Led the portal frontend serving 1,000+ users on real-time device monitoring.",
+    metrics: [
+      "5,000+ devices automated",
+      "96% provisioning efficiency gain",
+      "50% faster load times",
+      "150+ features shipped",
+    ],
+    stack: [
+      "Angular",
+      "WebSerial",
+      "WebUSB",
+      "BLE",
+      "NX Monorepo",
+      "CI/CD",
+      "Ionic",
+      "Capacitor",
+    ],
   },
   {
     id: "02",
@@ -107,10 +171,24 @@ export const projects = [
     period: "Jul 2022 — Nov 2023",
     type: "Enterprise · Migration",
     image: "/projects/kyosk.png",
-    problem: "Five teams, one monolith, one release train. Every deploy needed full cross-team coordination. Nothing shipped without a meeting first.",
-    outcome: "Migrated to Single-SPA micro-frontends so each team owned their own deployments. Rolled out a company-wide design system, moved REST to GraphQL, and cut mobile data usage 70% with PWA compression.",
-    metrics: ["50% developer velocity increase", "45% faster API response", "3× trip delivery volume", "70% mobile data cost reduction"],
-    stack: ["React", "Single-SPA", "GraphQL", "PWA", "Design System", "TypeScript"],
+    problem:
+      "Five teams, one monolith, one release train. Every deploy needed full cross-team coordination. Nothing shipped without a meeting first.",
+    outcome:
+      "Migrated to Single-SPA micro-frontends so each team owned their own deployments. Rolled out a company-wide design system, moved REST to GraphQL, and cut mobile data usage 70% with PWA compression.",
+    metrics: [
+      "50% developer velocity increase",
+      "45% faster API response",
+      "3× trip delivery volume",
+      "70% mobile data cost reduction",
+    ],
+    stack: [
+      "React",
+      "Single-SPA",
+      "GraphQL",
+      "PWA",
+      "Design System",
+      "TypeScript",
+    ],
   },
   {
     id: "03",
@@ -119,9 +197,16 @@ export const projects = [
     period: "Nov 2020 — Dec 2021",
     type: "Government · Transport",
     image: "/projects/ntsa.png",
-    problem: "Kenya's transport authority needed to track 500,000+ commercial vehicles. No digital infrastructure existed. Hard government deadline.",
-    outcome: "Built the React UI across 40+ screens wired into four microservice APIs. Shipped the MVP on time. Also led a travel booking platform redesign through user research that lifted conversions by 50%.",
-    metrics: ["500K+ vehicles tracked", "40+ screens delivered", "4 microservice APIs integrated", "+50% booking conversions"],
+    problem:
+      "Kenya's transport authority needed to track 500,000+ commercial vehicles. No digital infrastructure existed. Hard government deadline.",
+    outcome:
+      "Built the React UI across 40+ screens wired into four microservice APIs. Shipped the MVP on time. Also led a travel booking platform redesign through user research that lifted conversions by 50%.",
+    metrics: [
+      "500K+ vehicles tracked",
+      "40+ screens delivered",
+      "4 microservice APIs integrated",
+      "+50% booking conversions",
+    ],
     stack: ["React", "Figma", "Microservices", "UX Research", "TypeScript"],
   },
   {
@@ -132,10 +217,16 @@ export const projects = [
     type: "Education · Corporate",
     url: "https://lehightalentacademy.com",
     image: "/projects/ltaschool.png",
-    problem: "A US-based talent development organisation needed a professional web presence with working CI/CD and DNS, set up from nothing.",
-    outcome: "Delivered lehightalentacademy.com as lead. Set up Bitbucket CI pipelines, FTP deployment, and full DNS configuration.",
-    metrics: ["Live site delivered", "Full CI/CD pipeline", "US client, remote lead"],
-    stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS"],
+    problem:
+      "A US-based talent development organisation needed a professional web presence with working CI/CD and DNS, set up from nothing.",
+    outcome:
+      "Delivered lehightalentacademy.com as lead. Set up Bitbucket CI pipelines, FTP deployment, and full DNS configuration.",
+    metrics: [
+      "Live site delivered",
+      "Full CI/CD pipeline",
+      "US client, remote lead",
+    ],
+    stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS", "Tailwind"],
   },
   {
     id: "05",
@@ -145,10 +236,16 @@ export const projects = [
     type: "Education · Foundation",
     url: "https://lehightalentacademyfoundation.org",
     image: "/projects/ltafoundation.png",
-    problem: "The foundation needed its own site, separate from the academy but running on the same infrastructure.",
-    outcome: "Delivered lehightalentacademyfoundation.org as a standalone site, extending the existing CI/CD pipeline already in place.",
-    metrics: ["Standalone site delivered", "Shared CI/CD infrastructure", "US client, remote lead"],
-    stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS"],
+    problem:
+      "The foundation needed its own site, separate from the academy but running on the same infrastructure.",
+    outcome:
+      "Delivered lehightalentacademyfoundation.org as a standalone site, extending the existing CI/CD pipeline already in place.",
+    metrics: [
+      "Standalone site delivered",
+      "Shared CI/CD infrastructure",
+      "US client, remote lead",
+    ],
+    stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS", "Tailwind"],
   },
   {
     id: "06",
@@ -158,10 +255,17 @@ export const projects = [
     type: "SaaS · POS",
     url: "https://carwash.mikrosell.com",
     image: "/projects/carwash.png",
-    problem: "Carwash businesses tracking transactions and staff on paper. No receipts, no revenue reporting, no visibility into daily operations.",
-    outcome: "Built the whole thing solo. React frontend, Node.js and MongoDB backend, M-Pesa STK Push, automated email receipts, staff management, and daily transaction reporting.",
-    metrics: ["Solo full-stack delivery", "Full POS + reporting", "Automated receipts", "Live in production"],
-    stack: ["React", "Node.js", "MongoDB", "Mongoose", "Nodemailer"],
+    problem:
+      "Carwash businesses tracking transactions and staff on paper. No receipts, no revenue reporting, no visibility into daily operations.",
+    outcome:
+      "Built the whole thing solo. React frontend, Node.js and MongoDB backend, M-Pesa STK Push, automated email receipts, staff management, and daily transaction reporting.",
+    metrics: [
+      "Solo full-stack delivery",
+      "Full POS + reporting",
+      "Automated receipts",
+      "Live in production",
+    ],
+    stack: ["React", "Node.js", "MongoDB", "Mongoose"],
   },
   {
     id: "07",
@@ -171,10 +275,12 @@ export const projects = [
     type: "Education · Web",
     url: "https://www.kenwideinstitute.com",
     image: "/projects/kenwide.png",
-    problem: "An online German language school needed a site that could convert visitors into enrolled students, not just look good.",
-    outcome: "Led frontend development for the full site. Clean navigation, structured course presentation, built to drive enrolments.",
+    problem:
+      "An online German language school needed a site that could convert visitors into enrolled students, not just look good.",
+    outcome:
+      "Led frontend development for the full site. Clean navigation, structured course presentation, built to drive enrolments.",
     metrics: ["Lead frontend", "Live production site", "International client"],
-    stack: ["Angular", "TypeScript"],
+    stack: ["Angular", "TypeScript", "SASS"],
   },
   {
     id: "08",
@@ -184,10 +290,17 @@ export const projects = [
     type: "AgriTech · SaaS",
     url: "https://app.efasolsolutions.com",
     image: "/projects/efasol.png",
-    problem: "Farmers were logging incidents on paper and had no market access. Operations ran entirely offline and disconnected.",
-    outcome: "Built the platform solo. Incident management and a farmer marketplace, with Next.js, MikroORM, and GitHub Actions CI/CD running from the first commit.",
-    metrics: ["Solo full-stack delivery", "Incident mgmt + marketplace", "Automated CI/CD", "Live in production"],
-    stack: ["Next.js", "MikroORM", "GitHub Actions", "TypeScript"],
+    problem:
+      "Farmers were logging incidents on paper and had no market access. Operations ran entirely offline and disconnected.",
+    outcome:
+      "Built the platform solo. Incident management and a farmer marketplace, with Next.js, MikroORM, and GitHub Actions CI/CD running from the first commit.",
+    metrics: [
+      "Solo full-stack delivery",
+      "Incident mgmt + marketplace",
+      "Automated CI/CD",
+      "Live in production",
+    ],
+    stack: ["Next.js", "MikroK8s", "Docker", "GitHub Actions", "TypeScript"],
   },
   {
     id: "09",
@@ -197,10 +310,16 @@ export const projects = [
     type: "Web · Community",
     url: "https://hem.mikrosell.com",
     image: "/projects/hem.png",
-    problem: "A church choir needed a proper digital home for their music, events, and community.",
-    outcome: "Built and deployed solo with Next.js and AI-assisted development. Brief to live in days.",
-    metrics: ["Solo delivery", "AI-assisted development", "Days from brief to live"],
-    stack: ["Next.js", "TypeScript", "AI-assisted"],
+    problem:
+      "A church choir needed a proper digital home for their music, events, and community.",
+    outcome:
+      "Built and deployed solo with Next.js and AI-assisted development. Brief to live in days.",
+    metrics: [
+      "Solo delivery",
+      "AI-assisted development",
+      "Days from brief to live",
+    ],
+    stack: ["Next.js", "TypeScript", "Vercel"],
   },
 ];
 
@@ -209,7 +328,8 @@ export const careerItems = [
     period: "Nov 2023 — Present",
     company: "Kamsware LTD",
     role: "Senior Frontend Engineer",
-    summary: "Built and scaled hardware-connected frontend systems for 5,000+ IoT devices with a 96% provisioning and diagnostics efficiency improvement.",
+    summary:
+      "Built and scaled hardware-connected frontend systems for 5,000+ IoT devices with a 96% provisioning and diagnostics efficiency improvement.",
     bullets: [
       "Delivered 150+ features across 3 projects with 95% on-time success through cross-timezone coordination with offshore tech lead.",
       "Reduced app loading times by 50% and API integration effort by 30% by architecting reusable Angular OData query modules with intelligent caching.",
@@ -223,7 +343,8 @@ export const careerItems = [
     period: "Jul 2022 — Nov 2023",
     company: "Kyosk Digital",
     role: "Senior Frontend Engineer",
-    summary: "Migrated a legacy monolith to micro-frontends with Single-SPA, improving scalability and developer velocity by 50%.",
+    summary:
+      "Migrated a legacy monolith to micro-frontends with Single-SPA, improving scalability and developer velocity by 50%.",
     bullets: [
       "Implemented a company-wide design system that standardised web and mobile interfaces, increasing component reusability and boosting user satisfaction by 40%.",
       "Migrated REST APIs to GraphQL, cutting app response times by 45% and enabling 3× higher trip delivery volumes.",
@@ -236,7 +357,8 @@ export const careerItems = [
     period: "Jan — Jul 2022",
     company: "Innovex Solutions",
     role: "Frontend Engineer",
-    summary: "Architected an enterprise spare parts sourcing platform that reduced accident resolution time by 78%.",
+    summary:
+      "Architected an enterprise spare parts sourcing platform that reduced accident resolution time by 78%.",
     bullets: [
       "Architected an enterprise spare parts sourcing system for 60+ insurers and garages using Angular 16, TypeScript, and NgRx — reducing accident resolution time by 78%.",
       "Built a library of 20+ reusable Angular modules achieving 30% code reuse and cutting feature development time by 50%.",
@@ -248,7 +370,8 @@ export const careerItems = [
     period: "Nov 2020 — Dec 2021",
     company: "Data Integrated",
     role: "Frontend Engineer",
-    summary: "Built the React UI for the NTSA Intelligent Transport MVP, tracking 500,000+ commercial vehicles across 40+ screens.",
+    summary:
+      "Built the React UI for the NTSA Intelligent Transport MVP, tracking 500,000+ commercial vehicles across 40+ screens.",
     bullets: [
       "Led redesign of a travel booking platform through user interviews and usability testing — increased bookings by 50% and cut booking time by 30%.",
       "Built the React UI for the NTSA Intelligent Transport MVP, tracking 500,000+ commercial vehicles across 40+ Figma screens integrated with four microservice APIs.",
