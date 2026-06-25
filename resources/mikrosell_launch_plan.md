@@ -12,22 +12,22 @@
 
 ### Week 1 — Ship presence, send 20 outreach messages, book 2 discovery calls
 
-#### Day 1 (4h)
-- 🔵 **1h** — Write your positioning statement + niche offer (see GTM section)
-- 🔵 **2h** — Update mikrosell.com hero + services copy with Claude Code
-- ⚪ **1h** — Set up Calendly / Cal.com free tier for discovery call booking
+#### Day 1 (4h) ✅
+- ✅ **1h** — Write your positioning statement + niche offer (see GTM section)
+- ✅ **2h** — Update mikrosell.com hero + services copy with Claude Code
+- ✅ **1h** — Set up Calendly / Cal.com free tier for discovery call booking
 
-#### Day 2 (4h)
-- 🔵 **3h** — Ship laban.mikrosell.com — portfolio with 3 case studies (NTSA, LTA ERP, KamsGuard) with real numbers
-- ⚪ **1h** — Rewrite LinkedIn headline + About section. Set "Open to freelance work" mode
+#### Day 2 (4h) ✅
+- ✅ **3h** — Ship laban.mikrosell.com — portfolio with 3 case studies (NTSA, LTA ERP, KamsGuard) with real numbers
+- ✅ **1h** — Rewrite LinkedIn headline + About section. Set "Open to freelance work" mode
 
-#### Day 3 (4h)
-- 🟢 **1.5h** — Kenya outreach: WhatsApp/DM 10 founders in your network who may have pending frontend work
-- 🟢 **1h** — Toptal: refresh profile, set availability active, update rate to $65–80/hr
-- 🟡 **1h** — Install Claude Code: `npm i -g @anthropic-ai/claude-code` — test on your mikrosell repo
-- ⚪ **0.5h** — Set up Wise account for international USD/EUR payments
+#### Day 3 (4h) ✅
+- ✅ **1h** — Toptal: refresh profile, set availability active, update rate to $65–80/hr
+- ✅ **1h** — Install Claude Code: `npm i -g @anthropic-ai/claude-code` — test on your mikrosell repo
+- ✅ **0.5h** — Set up Wise account for international USD/EUR payments
 
 #### Day 4 (4h)
+- 🟢 **1.5h** — Kenya outreach: WhatsApp/DM 10 founders in your network who may have pending frontend work
 - 🟢 **2h** — International outreach: 5 cold DMs on LinkedIn to EU/US startup CTOs needing Angular/React
 - 🔵 **1h** — Publish LinkedIn post #1: "I'm going independent" announcement (template in Social Posts section)
 - ⚪ **1h** — Create Upwork profile as backup for international SME clients
