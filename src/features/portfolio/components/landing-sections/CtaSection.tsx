@@ -12,15 +12,22 @@ export function CtaSection() {
           <span className="text-[hsl(var(--primary))]">Right Problem.</span>
         </h2>
         <p className="mx-auto mt-5 max-w-[48ch] text-zinc-500 text-[1.05rem] leading-[1.7] mb-3">
-          Scalable architecture, high-quality UI, or a frontend that finally
+          Scalable architecture, AI-powered features, or a frontend that finally
           performs — I bring structure, clarity, and craft to every engagement.
         </p>
 
-        <a href="mailto:laban405@gmail.com" className="mt-3">
-          <AnimatedButton className="bg-primary border-none text-primary-foreground">
-            laban405@gmail.com →
-          </AnimatedButton>
-        </a>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-3">
+          <a href="https://cal.com/laban-mogire" target="_blank" rel="noopener noreferrer">
+            <AnimatedButton className="bg-primary border-none text-primary-foreground">
+              Book a Free Discovery Call →
+            </AnimatedButton>
+          </a>
+          <a href="mailto:laban405@gmail.com">
+            <AnimatedButton className="border-primary text-primary bg-transparent">
+              laban405@gmail.com
+            </AnimatedButton>
+          </a>
+        </div>
       </div>
     </section>
   );
