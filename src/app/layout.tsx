@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { cn } from "../lib/utils";
 import { ThemeProvider } from "../providers/theme-provider";
+import { Analytics } from "@vercel/analytics/next"
 import "../styles/globals.css";
 
 const SITE_URL = "https://laban.mikrosell.com";
