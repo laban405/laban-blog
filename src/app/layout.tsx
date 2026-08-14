@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Frontend Engineer specialising in AI integration — LLM-powered UIs, agentic workflows, React, Next.js, Angular, and mobile apps.",
     images: [
       {
-        url: "/assets/laban_clean.jpg",
+        url: "/assets/laban_clean.webp",
         width: 1247,
         height: 1280,
         alt: "Laban Mogire — AI-Native Frontend Engineer",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Laban Mogire | AI-Native Frontend Engineer",
     description:
       "Frontend Engineer specialising in AI integration — LLM-powered UIs, agentic workflows, React, Next.js, Angular, and mobile apps.",
-    images: ["/assets/laban_clean.jpg"],
+    images: ["/assets/laban_clean.webp"],
     creator: "@laban_mogire",
   },
   alternates: {

@@ -37,7 +37,7 @@
 ### OG Image is Portrait (1247×1280)
 
 **File:** `src/app/layout.tsx` — `openGraph.images` and `twitter.images`  
-**Current image:** `/assets/laban_clean.jpg` — portrait orientation  
+**Current image:** `/assets/laban_clean.webp` — portrait orientation  
 **Impact:** LinkedIn, WhatsApp, Facebook, and Slack crop share previews to landscape (1200×630). The current portrait image produces a heavily cropped thumbnail.
 
 **Fix:**
