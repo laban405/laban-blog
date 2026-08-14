@@ -142,6 +142,7 @@ function AppLayout({ children }: LayoutProps) {
             {children}
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
