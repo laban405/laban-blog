@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { AnimatedButton } from "../../../../components/animated-button";
 
 export function CtaSection() {
@@ -13,13 +14,16 @@ export function CtaSection() {
         </h2>
         <p className="mx-auto mt-5 max-w-[48ch] text-primary-foreground/70 text-[1.05rem] leading-[1.7] mb-3">
           Scalable architecture, AI-powered features, or a product that finally
-          performs — I bring structure, clarity, and craft to every engagement.
+          performs: I bring structure, clarity, and craft to every engagement.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-3">
           <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer">
             <AnimatedButton className="bg-white border-none text-primary">
-              Book a Free Discovery Call →
+              <span className="inline-flex items-center gap-1">
+                Book a Free Discovery Call
+                <ArrowRight className="h-3.5 w-3.5" />
+              </span>
             </AnimatedButton>
           </a>
           <a href="mailto:laban405@gmail.com">

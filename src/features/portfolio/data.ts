@@ -3,13 +3,13 @@ export const services = [
     id: "01",
     icon: "✦",
     title: "AI Integration & Agentic Systems",
-    desc: "I connect your product to Claude, GPT-4o, and beyond — streaming chat, AI copilots, RAG pipelines, and agentic workflows that feel native, not bolted on.",
+    desc: "I connect your product to Claude, GPT-4o, and beyond: streaming chat, AI copilots, RAG pipelines, and agentic workflows that feel native, not bolted on.",
   },
   {
     id: "02",
     icon: "⬡",
     title: "Frontend Engineering",
-    desc: "Production-grade interfaces in React, Next.js, and Angular — with enough backend knowledge to own API contracts, data models, and deployment without handing off.",
+    desc: "Production-grade interfaces in React, Next.js, and Angular, with enough backend knowledge to own API contracts, data models, and deployment without handing off.",
   },
   {
     id: "03",
@@ -27,25 +27,25 @@ export const services = [
     id: "05",
     icon: "◉",
     title: "IoT & Hardware-Connected Systems",
-    desc: "Production-grade hardware communication via WebSerial, WebUSB, BLE, and WiFi — built and deployed at scale across 5,000+ IoT devices.",
+    desc: "Production-grade hardware communication via WebSerial, WebUSB, BLE, and WiFi, built and deployed at scale across 5,000+ IoT devices.",
   },
   {
     id: "06",
     icon: "⚡",
     title: "Performance & Architecture Audit",
-    desc: "Faster loads, tighter APIs, smarter caching — I've cut load times by 50% and API integration effort by 30% in production. Clear written audit + action plan.",
+    desc: "Faster loads, tighter APIs, smarter caching. I've cut load times by 50% and API integration effort by 30% in production. Clear written audit + action plan.",
   },
   {
     id: "07",
     icon: "◈",
     title: "UI/UX Engineering",
-    desc: "Structured UX audits and accessible, intuitive interfaces — designed to work, not just look good.",
+    desc: "Structured UX audits and accessible, intuitive interfaces, designed to work, not just look good.",
   },
   {
     id: "08",
     icon: "◎",
     title: "Technical Leadership & Consultation",
-    desc: "Architecture decisions, coding standards, design systems, and mentorship — I raise the bar for the whole team, not just my own output.",
+    desc: "Architecture decisions, coding standards, design systems, and mentorship. I raise the bar for the whole team, not just my own output.",
   },
 ];
 
@@ -138,9 +138,29 @@ export const skillCategories = [
 export const projects = [
   {
     id: "01",
-    title: "KamsGuard — IoT Device Management Portal",
+    title: "AXA Hong Kong: Insurance Platform Revamp",
+    company: "EAB Systems",
+    period: "Jan – Jun 2022",
+    type: "Insurance · Design System",
+    url: "https://www.axa.com.hk/en",
+    image: "/projects/axa.png",
+    problem:
+      "AXA Hong Kong's insurance platform needed a revamp but had no shared component layer. Every form and screen was being built from scratch.",
+    outcome:
+      "Delivered a reusable design system published as an npm package, then built the platform's forms on top of it as a contract engagement through EAB Systems.",
+    metrics: [
+      "Design system published to npm",
+      "Reusable form components shipped",
+      "Insurance platform revamp",
+      "Contract delivery via EAB Systems",
+    ],
+    stack: ["React", "Redux Saga", "Design System", "npm"],
+  },
+  {
+    id: "02",
+    title: "KamsGuard: IoT Device Management Portal",
     company: "Kamsware LTD",
-    period: "Nov 2023 — Present",
+    period: "Nov 2023 – Present",
     type: "Enterprise · IoT",
     image: "/projects/kamsguard.png",
     problem:
@@ -165,10 +185,10 @@ export const projects = [
     ],
   },
   {
-    id: "02",
-    title: "Kyosk — Micro-frontend Migration",
+    id: "03",
+    title: "Kyosk: Micro-frontend Migration",
     company: "Kyosk Digital",
-    period: "Jul 2022 — Nov 2023",
+    period: "Jul 2022 – Nov 2023",
     type: "Enterprise · Migration",
     image: "/projects/kyosk.png",
     problem:
@@ -191,10 +211,10 @@ export const projects = [
     ],
   },
   {
-    id: "03",
-    title: "NTSA — Intelligent Transport System",
+    id: "04",
+    title: "NTSA: Intelligent Transport System",
     company: "Data Integrated",
-    period: "Nov 2020 — Dec 2021",
+    period: "Nov 2020 – Dec 2021",
     type: "Government · Transport",
     image: "/projects/ntsa.png",
     problem:
@@ -210,7 +230,7 @@ export const projects = [
     stack: ["React", "Figma", "Microservices", "UX Research", "TypeScript"],
   },
   {
-    id: "04",
+    id: "05",
     title: "Lehigh Talent Academy",
     company: "Lehigh Talent Academy",
     period: "2025",
@@ -229,7 +249,7 @@ export const projects = [
     stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS", "Tailwind"],
   },
   {
-    id: "05",
+    id: "06",
     title: "Lehigh Talent Academy Foundation",
     company: "Lehigh Talent Academy",
     period: "2026",
@@ -248,8 +268,8 @@ export const projects = [
     stack: ["Angular", "Bitbucket CI", "FTP Deploy", "DNS", "Tailwind"],
   },
   {
-    id: "06",
-    title: "Carwash POS — Full-Stack SaaS Platform",
+    id: "07",
+    title: "Carwash POS: Full-Stack SaaS Platform",
     company: "Mikrosell Systems",
     period: "2024",
     type: "SaaS · POS",
@@ -268,8 +288,8 @@ export const projects = [
     stack: ["React", "Node.js", "MongoDB", "Mongoose"],
   },
   {
-    id: "07",
-    title: "Kenwide Institute — Online German School",
+    id: "08",
+    title: "Kenwide Institute: Online German School",
     company: "Kenwide Institute",
     period: "2024",
     type: "Education · Web",
@@ -283,8 +303,8 @@ export const projects = [
     stack: ["Angular", "TypeScript", "SASS"],
   },
   {
-    id: "08",
-    title: "Efasol Solutions — Farm Management Platform",
+    id: "09",
+    title: "Efasol Solutions: Farm Management Platform",
     company: "Efasol Solutions",
     period: "2026",
     type: "AgriTech · SaaS",
@@ -303,8 +323,8 @@ export const projects = [
     stack: ["Next.js", "MikroK8s", "Docker", "GitHub Actions", "TypeScript"],
   },
   {
-    id: "09",
-    title: "HEM — Church Choir Website",
+    id: "10",
+    title: "HEM: Church Choir Website",
     company: "HEM Church",
     period: "2026",
     type: "Web · Community",
@@ -325,7 +345,7 @@ export const projects = [
 
 export const careerItems = [
   {
-    period: "Nov 2023 — Present",
+    period: "Nov 2023 – Present",
     company: "Kamsware LTD",
     role: "Senior Frontend Engineer",
     summary:
@@ -333,14 +353,14 @@ export const careerItems = [
     bullets: [
       "Delivered 150+ features across 3 projects with 95% on-time success through cross-timezone coordination with offshore tech lead.",
       "Reduced app loading times by 50% and API integration effort by 30% by architecting reusable Angular OData query modules with intelligent caching.",
-      "Built a scalable hardware-communication architecture using WebSerial, WebUSB, BLE, and WiFi APIs — automating provisioning and diagnostics for 5,000+ IoT devices with a 96% efficiency improvement.",
+      "Built a scalable hardware-communication architecture using WebSerial, WebUSB, BLE, and WiFi APIs, automating provisioning and diagnostics for 5,000+ IoT devices with a 96% efficiency improvement.",
       "Led frontend architecture for an enterprise IoT management portal serving 1,000+ users across 5+ sites with real-time notifications and device monitoring.",
-      "Mentored 3 junior developers — 2 earned promotions within 12 months. Team delivery speed up by 50%.",
+      "Mentored 3 junior developers, 2 of whom earned promotions within 12 months. Team delivery speed up by 50%.",
     ],
     tags: ["Angular", "IoT", "WebSerial", "BLE", "NX", "CI/CD"],
   },
   {
-    period: "Jul 2022 — Nov 2023",
+    period: "Jul 2022 – Nov 2023",
     company: "Kyosk Digital",
     role: "Senior Frontend Engineer",
     summary:
@@ -354,26 +374,26 @@ export const careerItems = [
     tags: ["React", "GraphQL", "Single-SPA", "PWA", "Design System"],
   },
   {
-    period: "Jan — Jul 2022",
+    period: "Jan – Jul 2022",
     company: "Innovex Solutions",
     role: "Frontend Engineer",
     summary:
       "Architected an enterprise spare parts sourcing platform that reduced accident resolution time by 78%.",
     bullets: [
-      "Architected an enterprise spare parts sourcing system for 60+ insurers and garages using Angular 16, TypeScript, and NgRx — reducing accident resolution time by 78%.",
+      "Architected an enterprise spare parts sourcing system for 60+ insurers and garages using Angular 16, TypeScript, and NgRx, reducing accident resolution time by 78%.",
       "Built a library of 20+ reusable Angular modules achieving 30% code reuse and cutting feature development time by 50%.",
       "Implemented automated visual regression testing, reducing UI bugs in production by 70%.",
     ],
     tags: ["Angular 16", "NgRx", "TypeScript", "Visual Testing"],
   },
   {
-    period: "Nov 2020 — Dec 2021",
+    period: "Nov 2020 – Dec 2021",
     company: "Data Integrated",
     role: "Frontend Engineer",
     summary:
       "Built the React UI for the NTSA Intelligent Transport MVP, tracking 500,000+ commercial vehicles across 40+ screens.",
     bullets: [
-      "Led redesign of a travel booking platform through user interviews and usability testing — increased bookings by 50% and cut booking time by 30%.",
+      "Led redesign of a travel booking platform through user interviews and usability testing, which increased bookings by 50% and cut booking time by 30%.",
       "Built the React UI for the NTSA Intelligent Transport MVP, tracking 500,000+ commercial vehicles across 40+ Figma screens integrated with four microservice APIs.",
       "Established coding standards for a 5-engineer team reducing code review time by 40% and cutting technical debt by 60%.",
     ],

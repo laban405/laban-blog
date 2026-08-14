@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { AnimatedButton } from "../../../../components/animated-button";
 
 import Image from "next/image";
@@ -76,7 +77,10 @@ export function HeroSection() {
             <div className="flex gap-3 flex-col">
               <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer" className="w-full">
                 <AnimatedButton className="bg-primary border-none text-primary-foreground w-full">
-                  Book a Free Discovery Call →
+                  <span className="inline-flex items-center gap-1">
+                    Book a Free Discovery Call
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
                 </AnimatedButton>
               </a>
               <a href="#contact" className="w-full">

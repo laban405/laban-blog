@@ -10,7 +10,7 @@ const SITE_URL = "https://laban.mikrosell.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Laban Mogire | AI-Native Frontend Engineer — React, Next.js & Angular",
+    default: "Laban Mogire | AI-Native Fullstack Engineer — React, Next.js, Angular & Nodejs",
     template: "%s | Laban Mogire",
   },
   description:

@@ -22,7 +22,7 @@ export function AnimatedButton({
           {children}
         </span>
 
-        <span className="absolute left-0 top-7 transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:top-[1.5px] text-center">
+        <span className="absolute left-0 right-0 top-7 transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:top-[1.5px] text-center">
           {children}
         </span>
       </div>

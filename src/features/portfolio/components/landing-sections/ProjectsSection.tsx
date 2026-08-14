@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { projects } from "../../data";
 
 export function ProjectsSection() {
@@ -24,10 +25,11 @@ export function ProjectsSection() {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary"
+                        className="text-primary inline-flex items-center gap-0.5"
                         style={{ fontSize: "12px", textDecoration: "underline", textUnderlineOffset: "3px" }}
                       >
-                        Live ↗
+                        Live
+                        <ArrowUpRight className="h-3.5 w-3.5" />
                       </a>
                     )}
                   </div>
