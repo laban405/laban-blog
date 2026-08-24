@@ -2,14 +2,19 @@
   "name": "laban-blog",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
     "start": "next start -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:design-system": "yarn workspace @laban405/design-system build"
   },
   "dependencies": {
+    "@laban405/design-system": "^0.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",

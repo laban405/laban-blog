@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { AnimatedButton } from "../../../../components/animated-button";
+import { Button } from "@laban405/design-system";
 import { ArrowUpRight } from "lucide-react";
 const easeOutExpo = [0.16, 1, 0.3, 1] as const;
 
@@ -220,14 +220,15 @@ export function ContactSection() {
               </p>
             ) : null}
 
-            <AnimatedButton
+            <Button
               type="submit"
-              className="bg-primary border-none text-primary-foreground w-fit"
+              variant="primary"
+              className="w-fit"
               style={{ width: "fit-content" }}
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
-            </AnimatedButton>
+            </Button>
           </form>
         </div>
       </div>
@@ -237,12 +238,13 @@ export function ContactSection() {
           <div className="w-full max-w-md rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6">
             <h3 className="text-2xl font-semibold mb-3">Message Status</h3>
             <p className="muted mb-5">{dialogMessage}</p>
-            <AnimatedButton
-              className="w-fit py-1! bg-primary text-primary-foreground border-none!"
+            <Button
+              variant="primary"
+              className="w-fit py-1!"
               onClick={() => setDialogMessage(null)}
             >
               Close
-            </AnimatedButton>
+            </Button>
           </div>
         </div>
       ) : null}

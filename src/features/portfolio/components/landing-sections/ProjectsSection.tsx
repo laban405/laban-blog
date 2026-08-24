@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { ListRow, Chip } from "@laban405/design-system";
 import { projects } from "../../data";
 
 export function ProjectsSection() {
@@ -10,12 +11,7 @@ export function ProjectsSection() {
 
         <div style={{ marginTop: "28px" }}>
           {projects.map((project) => (
-            <article className="list-line" key={project.id}>
-              <div className="top">
-                <span>{project.id}</span>
-                <span className="caps muted" style={{ fontSize: "11px" }}>{project.type}</span>
-              </div>
-
+            <ListRow key={project.id} index={project.id} eyebrow={project.type}>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-5" style={{ marginTop: "8px", alignItems: "flex-start" }}>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap", marginBottom: "4px" }}>
@@ -67,9 +63,9 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="career-tags">
+                  <div className="flex flex-wrap gap-2">
                     {project.stack.map((tag) => (
-                      <span className="ghost-pill" key={tag}>{tag}</span>
+                      <Chip variant="ghost" key={tag}>{tag}</Chip>
                     ))}
                   </div>
                 </div>
@@ -85,7 +81,7 @@ export function ProjectsSection() {
                   </div>
                 )}
               </div>
-            </article>
+            </ListRow>
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { AnimatedLink } from "../../../../components/animated-link";
+import { AnimatedLink } from "@laban405/design-system";
 import Image from "next/image";
 
 export function FooterSection() {

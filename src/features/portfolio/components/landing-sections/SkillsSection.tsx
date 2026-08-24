@@ -1,3 +1,4 @@
+import { Card, Chip } from "@laban405/design-system";
 import { skillCategories } from "../../data";
 
 export function SkillsSection() {
@@ -11,21 +12,16 @@ export function SkillsSection() {
 
         <div className="skills-grid" style={{ marginTop: "28px" }}>
           {skillCategories.map((category) => (
-            <article className="card skill-card" key={category.title}>
-              {/* <p className="caps muted" style={{ marginBottom: "8px" }}>
-                {category.icon}
-              </p> */}
+            <Card className="skill-card" key={category.title}>
               <h3 className="card-title" style={{ fontSize: "24px", marginBottom: "12px" }}>
                 {category.title}
               </h3>
               <div className="skills-list">
                 {category.items.map((item) => (
-                  <span key={item} className="skill-chip">
-                    {item}
-                  </span>
+                  <Chip key={item}>{item}</Chip>
                 ))}
               </div>
-            </article>
+            </Card>
           ))}
         </div>
       </div>

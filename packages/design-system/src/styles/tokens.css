@@ -1,0 +1,49 @@
+/* Color tokens — shadcn-style HSL custom properties. */
+:root {
+  --ds-background: 48 10% 95%;
+  --ds-foreground: 240 6% 10%;
+  --ds-card: 48 8% 94%;
+  --ds-card-foreground: 0 0% 7%;
+  --ds-popover: 48 8% 94%;
+  --ds-popover-foreground: 0 0% 7%;
+  --ds-primary: 152 43% 33%;
+  --ds-primary-foreground: 0 0% 100%;
+  --ds-secondary: 48 8% 90%;
+  --ds-secondary-foreground: 0 0% 11%;
+  --ds-muted: 48 8% 90%;
+  --ds-muted-foreground: 0 0% 42%;
+  --ds-accent: 152 43% 33%;
+  --ds-accent-foreground: 0 0% 100%;
+  --ds-destructive: 0 72% 51%;
+  --ds-destructive-foreground: 0 0% 98%;
+  --ds-border: 145 6% 80%;
+  --ds-input: 145 6% 80%;
+  --ds-ring: 152 43% 33%;
+  --ds-radius: 0.5rem;
+
+  /* Typography — override these with matching @font-face rules in your app. */
+  --ds-font-display: var(--font-stack-sans-notch, ui-sans-serif, system-ui, sans-serif);
+  --ds-font-text: var(--font-stack-sans-text, ui-sans-serif, system-ui, sans-serif);
+}
+
+.ds-dark {
+  --ds-background: 224 22% 10%;
+  --ds-foreground: 220 20% 96%;
+  --ds-card: 224 18% 13%;
+  --ds-card-foreground: 220 20% 96%;
+  --ds-popover: 224 18% 13%;
+  --ds-popover-foreground: 220 20% 96%;
+  --ds-primary: 250 86% 72%;
+  --ds-primary-foreground: 224 22% 10%;
+  --ds-secondary: 224 12% 18%;
+  --ds-secondary-foreground: 220 20% 92%;
+  --ds-muted: 224 12% 18%;
+  --ds-muted-foreground: 220 12% 72%;
+  --ds-accent: 250 86% 72%;
+  --ds-accent-foreground: 224 22% 10%;
+  --ds-destructive: 0 63% 40%;
+  --ds-destructive-foreground: 0 0% 98%;
+  --ds-border: 224 12% 24%;
+  --ds-input: 224 12% 24%;
+  --ds-ring: 250 86% 72%;
+}

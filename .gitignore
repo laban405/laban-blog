@@ -2,10 +2,13 @@
 
 # dependencies
 # .env
-/node_modules
+node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+
+# workspace package build output
+packages/*/dist
 
 # testing
 /coverage

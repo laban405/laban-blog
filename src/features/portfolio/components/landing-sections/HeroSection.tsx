@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { AnimatedButton } from "../../../../components/animated-button";
+import { Button } from "@laban405/design-system";
 
 import Image from "next/image";
 import { StatsSection } from "./Stats";
@@ -76,17 +76,17 @@ export function HeroSection() {
           <motion.div className="mt-6 flex gap-4 flex-col w-full sm:w-fit" {...fadeUp}>
             <div className="flex gap-3 flex-col">
               <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer" className="w-full">
-                <AnimatedButton className="bg-primary border-none text-primary-foreground w-full">
+                <Button variant="primary" className="w-full">
                   <span className="inline-flex items-center gap-1">
                     Book a Free Discovery Call
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>
-                </AnimatedButton>
+                </Button>
               </a>
               <a href="#contact" className="w-full">
-                <AnimatedButton className="border-primary text-primary bg-transparent w-full">
+                <Button variant="outline" className="w-full">
                   Let&apos;s Work Together
-                </AnimatedButton>
+                </Button>
               </a>
             </div>
             <StatsSection/>

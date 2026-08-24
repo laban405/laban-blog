@@ -1,5 +1,4 @@
-import { AnimatedButton } from "../../../../components/animated-button";
-import { AnimatedLink } from "../../../../components/animated-link";
+import { Button, AnimatedLink } from "@laban405/design-system";
 
 export function HeaderSection() {
   return (
@@ -33,9 +32,12 @@ export function HeaderSection() {
         </nav>
 
         <a href="#contact">
-          <AnimatedButton className="bg-primary border-none text-primary-foreground max-[980px]:px-[14px] max-[980px]:text-[10px] max-[980px]:tracking-[0.08em]">
+          <Button
+            variant="primary"
+            className="max-[980px]:px-[14px] max-[980px]:text-[10px] max-[980px]:tracking-[0.08em]"
+          >
             Get in Touch
-          </AnimatedButton>
+          </Button>
         </a>
       </div>
 

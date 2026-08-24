@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AnimatedButton } from "../../components/animated-button";
-import { AnimatedLink } from "../../components/animated-link";
+import { Button, AnimatedLink, Card, Chip, ListRow, AccordionRow, StatCounter } from "@laban405/design-system";
 
 export const metadata: Metadata = {
   title: "Design System",
@@ -77,7 +76,7 @@ const radiusScale = [
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="list-line grid sm:grid-cols-[160px_1fr] gap-2 sm:gap-6 items-start">
+    <div className="ds-list-row grid sm:grid-cols-[160px_1fr] gap-2 sm:gap-6 items-start">
       <p className="caps muted pt-1">{label}</p>
       <div>{children}</div>
     </div>
@@ -96,7 +95,7 @@ function DemoBlock({
   children: React.ReactNode;
 }) {
   return (
-    <article className="card">
+    <Card>
       <div className="flex items-start justify-between gap-4 flex-wrap mb-3">
         <h3 className="card-title" style={{ fontSize: "20px", marginBottom: 0 }}>
           {title}
@@ -109,7 +108,7 @@ function DemoBlock({
       <div className="pt-2 border-t" style={{ borderColor: "hsl(var(--border))" }}>
         <div className="pt-4">{children}</div>
       </div>
-    </article>
+    </Card>
   );
 }
 
@@ -130,10 +129,11 @@ const sectionInventory: { name: string; anchor: string; file: string; purpose: s
 ];
 
 const sharedComponents: { name: string; file: string; purpose: string }[] = [
-  { name: "AnimatedButton", file: "components/animated-button.tsx", purpose: "Pill button, vertical text-slide hover swap. Default styling is the ghost variant; bg/text/border overridden via className for primary/outline variants." },
-  { name: "AnimatedLink", file: "components/animated-link.tsx", purpose: "Anchor with the same vertical text-slide hover effect as AnimatedButton, used for all nav and footer links." },
-  { name: "CursorTrail", file: "components/cursor-trail.tsx", purpose: "Fixed-position spring-following dot + ring that replaces the system cursor. Gated on (pointer: fine); no-ops on touch devices." },
-  { name: "useActiveSection", file: "hooks/useActiveSection.tsx", purpose: "IntersectionObserver + scroll-fallback hook for tracking which section is active for nav highlighting." },
+  { name: "Button", file: "@laban405/design-system", purpose: "Pill button, vertical text-slide hover swap. variant prop: \"primary\" | \"outline\" | \"ghost\" (default)." },
+  { name: "AnimatedLink", file: "@laban405/design-system", purpose: "Anchor with the same vertical text-slide hover effect as Button, used for all nav and footer links." },
+  { name: "Card / Chip / ListRow / AccordionRow / StatCounter", file: "@laban405/design-system", purpose: "Tonal card surface, pill chips, bordered list rows, reveal-on-hover accordion rows, and spring count-up stats." },
+  { name: "CursorTrail", file: "@laban405/design-system", purpose: "Fixed-position spring-following dot + ring that replaces the system cursor. Gated on (pointer: fine); no-ops on touch devices." },
+  { name: "useActiveSection", file: "@laban405/design-system", purpose: "IntersectionObserver + scroll-fallback hook for tracking which section is active for nav highlighting." },
 ];
 
 export default function DesignSystemPage() {
@@ -273,7 +273,7 @@ export default function DesignSystemPage() {
         </div>
 
         <div className="mt-10 grid sm:grid-cols-2 gap-6">
-          <div className="card">
+          <Card as="div">
             <p className="caps muted">Breakpoint</p>
             <p className="card-title" style={{ fontSize: "22px" }}>
               980px
@@ -283,8 +283,8 @@ export default function DesignSystemPage() {
               <span className="font-mono">max-[980px]:</span> / <span className="font-mono">min-[981px]:</span>. Nav
               collapses and multi-column grids stack to 1 column below this width.
             </p>
-          </div>
-          <div className="card">
+          </Card>
+          <Card as="div">
             <p className="caps muted">Container</p>
             <p className="card-title" style={{ fontSize: "22px" }}>
               1160px
@@ -294,7 +294,7 @@ export default function DesignSystemPage() {
               Section content, however, is mostly wrapped in an inner{" "}
               <span className="font-mono">max-w-2xl mx-auto</span> column.
             </p>
-          </div>
+          </Card>
         </div>
       </section>
 
@@ -311,24 +311,20 @@ export default function DesignSystemPage() {
         <div className="grid gap-4">
           <DemoBlock
             title="Buttons"
-            path="components/animated-button.tsx"
-            desc="Pill button with a vertical text-slide hover swap. No built-in variant prop — primary/outline are className overrides of the ghost default."
+            path="@laban405/design-system — Button"
+            desc="Pill button with a vertical text-slide hover swap. variant prop: \"primary\" | \"outline\" | \"ghost\" (default)."
           >
             <div className="flex flex-wrap gap-3 items-center">
-              <AnimatedButton className="bg-primary border-none text-primary-foreground">
-                Primary
-              </AnimatedButton>
-              <AnimatedButton className="border-primary text-primary bg-transparent">
-                Outline
-              </AnimatedButton>
-              <AnimatedButton>Ghost (default)</AnimatedButton>
+              <Button variant="primary">Primary</Button>
+              <Button variant="outline">Outline</Button>
+              <Button>Ghost (default)</Button>
             </div>
           </DemoBlock>
 
           <DemoBlock
             title="Links"
-            path="components/animated-link.tsx"
-            desc="Same vertical text-slide hover as AnimatedButton, used for all nav and footer anchors."
+            path="@laban405/design-system — AnimatedLink"
+            desc="Same vertical text-slide hover as Button, used for all nav and footer anchors."
           >
             <div className="flex flex-wrap gap-6 text-[11px] uppercase tracking-[0.14em]">
               <AnimatedLink href="#">Nav Link</AnimatedLink>
@@ -340,32 +336,32 @@ export default function DesignSystemPage() {
 
           <DemoBlock
             title="Cards"
-            path=".card / .card.cta — globals.css"
-            desc="Tonal surface, 1px border, 8px radius. .cta variant tints toward the primary color for emphasis blocks."
+            path="@laban405/design-system — Card"
+            desc="Tonal surface, 1px border, 8px radius. variant=\"cta\" tints toward the primary color for emphasis blocks."
           >
             <div className="grid sm:grid-cols-2 gap-3">
-              <div className="card">
+              <Card>
                 <p className="caps muted">01</p>
                 <h3 className="card-title">Default Card</h3>
                 <p className="muted">Used for services and skill-category groupings.</p>
-              </div>
-              <div className="card cta">
+              </Card>
+              <Card variant="cta">
                 <p className="caps muted">02</p>
                 <h3 className="card-title">CTA Card</h3>
                 <p className="muted">Accent-tinted background and border.</p>
-              </div>
+              </Card>
             </div>
           </DemoBlock>
 
           <DemoBlock
             title="Chips & Pills"
-            path=".skill-chip / .ghost-pill — globals.css"
-            desc="Pill-shaped tags. Metric pills (e.g. project outcomes) are an inline-style one-off, not a shared class."
+            path="@laban405/design-system — Chip"
+            desc="Pill-shaped tags. variant=\"ghost\" for outlined/interactive tags. Metric pills (e.g. project outcomes) are an inline-style one-off, not a shared class."
           >
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="skill-chip">React</span>
-              <span className="skill-chip">Next.js</span>
-              <span className="ghost-pill">Ghost Pill</span>
+              <Chip>React</Chip>
+              <Chip>Next.js</Chip>
+              <Chip variant="ghost">Ghost Pill</Chip>
               <span
                 style={{
                   fontSize: 11,
@@ -384,60 +380,38 @@ export default function DesignSystemPage() {
 
           <DemoBlock
             title="List Row"
-            path=".list-line — globals.css"
+            path="@laban405/design-system — ListRow"
             desc="Border-bottom divider row, no card container. Used for Projects and Career entries."
           >
-            <div className="list-line">
-              <div className="top">
-                <span>01</span>
-                <span className="caps muted" style={{ fontSize: "11px" }}>
-                  Case Study
-                </span>
-              </div>
+            <ListRow index="01" eyebrow="Case Study">
               <p className="muted" style={{ marginTop: 8, fontSize: "13px" }}>
                 Row pattern — title/eyebrow on top, freeform content below.
               </p>
-            </div>
+            </ListRow>
           </DemoBlock>
 
           <DemoBlock
             title="Reveal-on-Hover Accordion"
-            path=".career-item / .career-expand — globals.css"
+            path="@laban405/design-system — AccordionRow"
             desc="Pure-CSS max-height transition, no JS. Hover the row to reveal bullets and tags."
           >
-            <article className="list-line career-item">
-              <div className="top">
-                <span className="text-base font-bold">Senior Engineer</span>
-                <span className="score">2023 — Present</span>
-              </div>
-              <p className="muted career-summary">Hover this row to expand.</p>
-              <div className="career-expand">
-                <ul className="career-bullets">
-                  <li>Detail bullet revealed on hover.</li>
-                  <li>Second supporting bullet.</li>
-                </ul>
-                <div className="career-tags">
-                  <span className="skill-chip">React</span>
-                  <span className="skill-chip">TypeScript</span>
-                </div>
-              </div>
-            </article>
+            <AccordionRow
+              title="Senior Engineer"
+              meta="2023 — Present"
+              summary="Hover this row to expand."
+              bullets={["Detail bullet revealed on hover.", "Second supporting bullet."]}
+              tags={["React", "TypeScript"]}
+            />
           </DemoBlock>
 
           <DemoBlock
             title="Stat Counter"
-            path="landing-sections/Stats.tsx"
-            desc="Spring-animated count-up (Framer Motion useSpring), triggered once via IntersectionObserver when scrolled into view. Static value shown here."
+            path="@laban405/design-system — StatCounter"
+            desc="Spring-animated count-up (Framer Motion useSpring), triggered once via IntersectionObserver when scrolled into view."
           >
             <div className="flex gap-8">
-              <div>
-                <p className="stat-big">10+</p>
-                <div className="uppercase text-zinc-500 text-xs mt-2">Projects Done</div>
-              </div>
-              <div>
-                <p className="stat-big">6+</p>
-                <div className="uppercase text-zinc-500 text-xs mt-2">Years Building</div>
-              </div>
+              <StatCounter value={10} label="Projects Done" />
+              <StatCounter value={6} label="Years Building" delay={120} />
             </div>
           </DemoBlock>
 
@@ -454,7 +428,7 @@ export default function DesignSystemPage() {
 
           <DemoBlock
             title="Cursor Trail"
-            path="components/cursor-trail.tsx"
+            path="@laban405/design-system — CursorTrail"
             desc="Global fixed-position spring-following dot + ring that replaces the OS cursor site-wide, gated on (pointer: fine) so it no-ops on touch devices. Not embedded here since it binds to the real mouse position; see it live on the main site."
           >
             <p className="muted" style={{ fontSize: "13px" }}>
@@ -476,7 +450,7 @@ export default function DesignSystemPage() {
         </p>
         <div className="border-t" style={{ borderColor: "hsl(var(--border))" }}>
           {sectionInventory.map((s) => (
-            <div key={s.name} className="list-line grid sm:grid-cols-[1fr_1fr_2fr] gap-2 sm:gap-6">
+            <div key={s.name} className="ds-list-row grid sm:grid-cols-[1fr_1fr_2fr] gap-2 sm:gap-6">
               <div>
                 <p className="font-semibold text-[14px]">{s.name}</p>
                 <p className="muted font-mono text-[11px]">{s.anchor}</p>
@@ -490,7 +464,7 @@ export default function DesignSystemPage() {
         <p className="caps muted mt-12 mb-2">Shared components &amp; hooks</p>
         <div className="border-t" style={{ borderColor: "hsl(var(--border))" }}>
           {sharedComponents.map((c) => (
-            <div key={c.name} className="list-line grid sm:grid-cols-[1fr_1fr_2fr] gap-2 sm:gap-6">
+            <div key={c.name} className="ds-list-row grid sm:grid-cols-[1fr_1fr_2fr] gap-2 sm:gap-6">
               <p className="font-semibold text-[14px]">{c.name}</p>
               <p className="muted font-mono text-[11px]">{c.file}</p>
               <p className="muted text-[13px]">{c.purpose}</p>
@@ -512,11 +486,11 @@ export default function DesignSystemPage() {
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 mt-4">
-          <div className="card">
+          <Card>
             <h3 className="card-title" style={{ fontSize: "18px" }}>
               Do
             </h3>
-            <ul className="career-bullets" style={{ paddingLeft: 18, marginTop: 8 }}>
+            <ul className="muted" style={{ paddingLeft: 18, marginTop: 8, display: "grid", gap: 6 }}>
               <li>Use warm neutral fields (paper/soft-stock) as the dominant canvas.</li>
               <li>Enforce uppercase micro-typography for nav and utility labels.</li>
               <li>Use 1px structural borders to organize sections and lists.</li>
@@ -524,12 +498,12 @@ export default function DesignSystemPage() {
               <li>Prefer existing globals.css classes over one-off Tailwind utilities for structure.</li>
               <li>Gate every entry animation on useReducedMotion(), short-circuiting to {"{}"} when set.</li>
             </ul>
-          </div>
-          <div className="card">
+          </Card>
+          <Card>
             <h3 className="card-title" style={{ fontSize: "18px" }}>
               Don&apos;t
             </h3>
-            <ul className="career-bullets" style={{ paddingLeft: 18, marginTop: 8 }}>
+            <ul className="muted" style={{ paddingLeft: 18, marginTop: 8, display: "grid", gap: 6 }}>
               <li>Use SaaS dashboard aesthetics or generic UI-kit sameness.</li>
               <li>Introduce a second saturated accent color alongside emerald.</li>
               <li>Use gradient text treatments.</li>
@@ -537,37 +511,37 @@ export default function DesignSystemPage() {
               <li>Use pure grayscale neutrals — backgrounds stay warm-tinted.</li>
               <li>Use decorative bounce easing — motion is for emphasis only.</li>
             </ul>
-          </div>
+          </Card>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4 mt-6">
-          <div className="card cta">
+          <Card variant="cta">
             <p className="caps muted">Named Rule</p>
             <p className="font-semibold mt-1">One-Voice Accent Rule</p>
             <p className="muted text-[13px] mt-1">
               Emerald is the only recurring accent family. No competing saturated accents.
             </p>
-          </div>
-          <div className="card cta">
+          </Card>
+          <Card variant="cta">
             <p className="caps muted">Named Rule</p>
             <p className="font-semibold mt-1">Warm Field Rule</p>
             <p className="muted text-[13px] mt-1">Neutral backgrounds stay warm-tinted; pure grayscale is prohibited.</p>
-          </div>
-          <div className="card cta">
+          </Card>
+          <Card variant="cta">
             <p className="caps muted">Named Rule</p>
             <p className="font-semibold mt-1">Tight-Headline Rule</p>
             <p className="muted text-[13px] mt-1">
               Display and headline lines always use negative tracking and compact leading.
             </p>
-          </div>
-          <div className="card cta">
+          </Card>
+          <Card variant="cta">
             <p className="caps muted">Named Rule</p>
             <p className="font-semibold mt-1">Tonal Depth Rule</p>
             <p className="muted text-[13px] mt-1">
               Depth comes from tone and border at rest; shadow is stateful and minimal, never a permanent heavy drop
               shadow.
             </p>
-          </div>
+          </Card>
         </div>
       </section>
     </main>

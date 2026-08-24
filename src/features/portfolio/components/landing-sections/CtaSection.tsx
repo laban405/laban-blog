@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { AnimatedButton } from "../../../../components/animated-button";
+import { Button } from "@laban405/design-system";
 
 export function CtaSection() {
   return (
@@ -19,17 +19,17 @@ export function CtaSection() {
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-3">
           <a href="https://cal.com/laban" target="_blank" rel="noopener noreferrer">
-            <AnimatedButton className="bg-white border-none text-primary">
+            <Button className="bg-white border-none text-primary">
               <span className="inline-flex items-center gap-1">
                 Book a Free Discovery Call
                 <ArrowRight className="h-3.5 w-3.5" />
               </span>
-            </AnimatedButton>
+            </Button>
           </a>
           <a href="mailto:laban405@gmail.com">
-            <AnimatedButton className="border-white text-white bg-transparent">
+            <Button className="border-white text-white bg-transparent">
               laban405@gmail.com
-            </AnimatedButton>
+            </Button>
           </a>
         </div>
       </div>

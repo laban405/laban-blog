@@ -1,4 +1,4 @@
-import { AnimatedButton } from "../../../../components/animated-button";
+import { Button, AccordionRow } from "@laban405/design-system";
 import { careerItems } from "../../data";
 
 export function CareerSection() {
@@ -18,36 +18,20 @@ export function CareerSection() {
             download
             className="pill-btn inline-flex items-center"
           >
-            <AnimatedButton>Download CV</AnimatedButton>
+            <Button>Download CV</Button>
           </a>
         </div>
         <div>
           {careerItems.map((item) => (
-            <article
-              className="list-line career-item"
+            <AccordionRow
               key={`${item.company}-${item.period}`}
-            >
-              <div className="uppercase text-zinc-500 text-sm mb-1">{`${item.company}`}</div>
-              <div className="top">
-                <span className="text-base font-bold">{item.role}</span>
-                <span className="score">{item.period}</span>
-              </div>
-              <p className="muted career-summary">{item.summary}</p>
-              <div className="career-expand">
-                <ul className="career-bullets">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-                <div className="career-tags">
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="skill-chip">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
+              eyebrow={item.company}
+              title={item.role}
+              meta={item.period}
+              summary={item.summary}
+              bullets={item.bullets}
+              tags={item.tags}
+            />
           ))}
         </div>
       </div>

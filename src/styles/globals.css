@@ -180,21 +180,6 @@ a {
 }
 
 
-.ghost-pill {
-  border-radius: 999px;
-  padding: 3px 10px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  border: 1px solid hsl(var(--border));
-  color: hsl(var(--foreground));
-  background: transparent;
-}
-
-
-
-
 .hero-subtitle {
   font-size: 16px;
   margin-bottom: 8px;
@@ -206,14 +191,6 @@ a {
   gap: 30px;
   margin-top: 38px;
 }
-
-.stat-big {
-  font-size: 46px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-
 
 .socials {
   display: flex;
@@ -264,30 +241,6 @@ a {
   gap: 8px;
 }
 
-.skill-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid hsl(var(--border));
-  background: color-mix(in srgb, hsl(var(--background)) 78%, hsl(var(--card)) 22%);
-  font-size: 12px;
-  color: hsl(var(--foreground));
-}
-
-.card {
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
-  border-radius: 8px;
-  min-height: 190px;
-  padding: 22px;
-}
-
-.card.cta {
-  background: color-mix(in srgb, hsl(var(--primary)) 15%, hsl(var(--card)) 85%);
-  border-color: color-mix(in srgb, hsl(var(--primary)) 24%, hsl(var(--border)) 76%);
-}
-
 .card-title {
   font-size: 28px;
   margin-bottom: 10px;
@@ -299,71 +252,6 @@ a {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
-}
-
-.list-line {
-  border-bottom: 1px solid hsl(var(--border));
-  padding: 16px 0;
-}
-
-.career-item {
-  transition: background-color 0.2s ease, padding 0.2s ease;
-}
-
-.career-summary {
-  margin-top: 8px;
-}
-
-.career-expand {
-  display: grid;
-  gap: 10px;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
-}
-
-.career-item:hover .career-expand {
-  max-height: 340px;
-  opacity: 1;
-  margin-top: 10px;
-}
-
-.career-bullets {
-  margin: 0;
-  padding-left: 18px;
-  color: hsl(var(--muted-foreground));
-  display: grid;
-  gap: 6px;
-}
-
-.career-bullets li {
-  line-height: 1.55;
-  font-size: 13px;
-}
-
-.career-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.list-line .top {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 25px;
-  font-family: var(--font-stack-sans-notch), sans-serif;
-}
-
-.score {
-  color: hsl(var(--accent));
-  font-size: 16px;
-  white-space: nowrap;
-}
-
-.company {
-  margin-bottom: 5px;
 }
 
 .testimonial-head {

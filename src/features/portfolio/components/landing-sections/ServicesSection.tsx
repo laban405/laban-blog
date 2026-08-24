@@ -1,3 +1,4 @@
+import { Card } from "@laban405/design-system";
 import { services } from "../../data";
 
 export function ServicesSection() {
@@ -13,11 +14,11 @@ export function ServicesSection() {
       </div>
         <div className="grid sm:grid-cols-2 gap-3">
           {services.map((service) => (
-            <article className="card" key={service.id}>
+            <Card key={service.id}>
               <p className="caps muted">{service.id}</p>
               <h3 className="card-title">{service.title}</h3>
               <p className="muted">{service.desc}</p>
-            </article>
+            </Card>
           ))}
         </div>
       </div>
